@@ -22,7 +22,6 @@
 * **Gói (`package`):** Dùng để phân loại và quản lý các file mã nguồn (như các thư mục nhỏ).
 
 
-* ⚠️ **Lưu ý khi nộp bài chấm tự động (OJ):** Khi nộp bài lên các hệ thống online như OJ, **phải xóa dòng khai báo `package**` ở đầu file để tránh bị lỗi biên dịch (CE).
 
 
 
