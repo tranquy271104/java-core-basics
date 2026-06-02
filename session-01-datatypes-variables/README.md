@@ -1,4 +1,4 @@
-Dưới đây là bản tổng hợp kiến thức toàn diện từ $A \rightarrow Z$ dựa trên nội dung bài giảng, được tối ưu hóa cấu trúc Markdown chuẩn chỉnh để bạn sao chép và lưu trữ làm tài liệu học tập trên GitHub.
+
 
 ---
 
@@ -6,12 +6,10 @@ Dưới đây là bản tổng hợp kiến thức toàn diện từ $A \rightar
 
 ## 1. Công cụ lập trình & Cấu trúc file Java (Setup & Structure)
 
-* 
-**Các IDE phổ biến:** NetBeans, Eclipse, IntelliJ IDEA, VS Code. Giáo viên khuyến khích sử dụng công cụ có sẵn thay vì biên dịch online để quản lý dự án lâu dài.
+* **Các IDE phổ biến:** NetBeans, Eclipse, IntelliJ IDEA, VS Code. Giáo viên khuyến khích sử dụng công cụ có sẵn thay vì biên dịch online để quản lý dự án lâu dài.
 
 
-* 
-**Trình biên dịch Online:** Chỉ nên dùng tạm thời (ví dụ: OnlineGDB) khi máy lỗi. Không dùng lâu dài vì khó quản lý các file mã nguồn khi dự án lên tới hàng trăm dòng.
+* **Trình biên dịch Online:** Chỉ nên dùng tạm thời (ví dụ: OnlineGDB) khi máy lỗi. Không dùng lâu dài vì khó quản lý các file mã nguồn khi dự án lên tới hàng trăm dòng.
 
 
 * **Cấu trúc một file Java bắt buộc:**
