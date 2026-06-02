@@ -7,13 +7,12 @@
 
 ## 1. Hệ Thống Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)
 
-```text
 +--------------+-----------+----------------------------------------------------+
 | Kiểu dữ liệu | Kích thước| Phạm vi giá trị / Đặc tính cốt lõi (28Tech)        |
 +--------------+-----------+----------------------------------------------------+
 | byte         | 1 byte    | -128 đến 127                                       |
 | short        | 2 byte    | -32,768 đến 32,767                                 |
-| int          | 4 byte    | -2^31 đến 2^31 - 1 (~2 tỷ) -> Kiểu số nguyên gốc  |
+| int          | 4 byte    | -2^31 đến 2^31 - 1 (~2 tỷ) -> Kiểu số nguyên gốc   |
 | long         | 8 byte    | -2^63 đến 2^63 - 1 (Số rất lớn) -> Cần hậu tố 'L'  |
 | float        | 4 byte    | Số thực thập phân, chính xác 6-7 chữ số (Đuôi 'F') |
 | double       | 8 byte    | Số thực thập phân, chính xác 15 chữ số (Mặc định)  |
@@ -21,7 +20,7 @@
 | boolean      | 1 byte    | Chỉ nhận 2 giá trị duy nhất: true hoặc false       |
 +--------------+-----------+----------------------------------------------------+
 
-```
+
 
 ### 🚨 Quy tắc đặt tên biến và Name Convention (Chuẩn Java):
 
