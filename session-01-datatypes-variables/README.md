@@ -1,6 +1,3 @@
-Dưới đây là toàn bộ file `README.md` đã được gộp chung vào một khối duy nhất. Cậu chỉ cần nhấn nút Copy ở góc trên cùng bên phải của khối code này và dán thẳng vào GitHub là xong nhé! 🚀
-
-```markdown
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Basics%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
 
