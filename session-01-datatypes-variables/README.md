@@ -24,24 +24,19 @@
 
 ### 🚨 Quy tắc đặt tên biến và Name Convention (Chuẩn Java):
 
-* 
-**KHÔNG** bắt đầu bằng chữ số (Ví dụ sai: `1dientich`, `2chuvi`).
+* **KHÔNG** bắt đầu bằng chữ số (Ví dụ sai: `1dientich`, `2chuvi`).
 
 
-* 
-**KHÔNG** chứa dấu cách và các ký tự đặc biệt (Ví dụ sai: `ban kinh`, `dien#tich`).
+* **KHÔNG** chứa dấu cách và các ký tự đặc biệt (Ví dụ sai: `ban kinh`, `dien#tich`).
 
 
-* 
-**KHÔNG** trùng với từ khóa hệ thống (`int`, `main`, `for`, `while`, `switch`...).
+* **KHÔNG** trùng với từ khóa hệ thống (`int`, `main`, `for`, `while`, `switch`...).
 
 
-* 
-**PHÂN BIỆT** hoa thường (`banKinh` và `BanKinh` là 2 biến khác nhau hoàn toàn).
+* **PHÂN BIỆT** hoa thường (`banKinh` và `BanKinh` là 2 biến khác nhau hoàn toàn).
 
 
-* 
-**CAMELCASE:** Viết thường từ đầu, viết hoa chữ cái đầu từ tiếp theo (Ví dụ: `banKinh`, `dienTich`, `diemTrungBinh`).
+* **CAMELCASE:** Viết thường từ đầu, viết hoa chữ cái đầu từ tiếp theo (Ví dụ: `banKinh`, `dienTich`, `diemTrungBinh`).
 
 
 
