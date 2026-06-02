@@ -14,7 +14,7 @@
 ---
 
 ## 📖 Giới thiệu
-Kho lưu trữ này chứa các ghi chép chi tiết về nền tảng ngôn ngữ lập trình Java. Tài liệu được biên soạn lại một cách sạch sẽ, chuẩn Markdown, tập trung vào tính ứng dụng thực tế và rất phù hợp để tra cứu nhanh. 
+Kho lưu trữ này chứa các ghi chép chi tiết về nền tảng ngôn ngữ lập trình Java.
 
 Nguồn tham khảo chính: **28TECH**.
 
