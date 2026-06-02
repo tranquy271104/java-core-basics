@@ -170,9 +170,6 @@ switch (val) {
 Cú pháp: [Biến] = [Biểu thức so sánh] ? [Giá trị khi ĐÚNG] : [Giá trị khi SAI];
 Ví dụ:   int x = (10 < 20) ? 10 : 20; // x nhận giá trị 10 vì điều kiện ĐÚNG.
 
-```
-
-```
 
 
 
