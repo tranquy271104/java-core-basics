@@ -44,58 +44,18 @@ public class Main {
 
 ## 2. Các kiểu dữ liệu cơ bản (Primitive Data Types)
 
-Java hỗ trợ 8 kiểu dữ liệu nguyên thủy, trong đó có 6 kiểu cốt lõi cần nhớ:
+[cite_start]Java hỗ trợ 8 kiểu dữ liệu nguyên thủy, trong đó có 6 kiểu cốt lõi cần nhớ[cite: 327]:
 
 | Nhóm dữ liệu | Kiểu dữ liệu | Kích thước | Giới hạn lưu trữ (Ước lượng) | Ghi chú & Ứng dụng |
-| --- | --- | --- | --- | --- |
-| **Số nguyên** | `int` | 4 bytes (32-bit) 
+| :--- | :--- | :--- | :--- | :--- |
+| **Số nguyên** | [cite_start]`int` [cite: 330] | [cite_start]4 bytes (32-bit) [cite: 330] | [cite_start]$-2 \times 10^9$ đến $2 \times 10^9$ (Tối đa 10 chữ số) [cite: 330] | [cite_start]Dùng phổ biến nhất cho số nguyên thông thường[cite: 331]. |
+| | [cite_start]`long` [cite: 331] | [cite_start]8 bytes (64-bit) [cite: 332] | [cite_start]$-9 \times 10^{18}$ đến $9 \times 10^{18}$ (Tối đa 19 chữ số) [cite: 332] | [cite_start]Dùng khi dữ liệu hoặc kết quả tính toán có thể cực lớn[cite: 333]. |
+| **Số thực** | [cite_start]`float` [cite: 334] | [cite_start]4 bytes (32-bit) [cite: 334] | [cite_start]Độ chính xác đơn (6 - 7 chữ số sau dấu phẩy) [cite: 334] | [cite_start]Ít dùng, khi gán hằng số cần thêm hậu tố `F` hoặc `f`[cite: 335]. |
+| | [cite_start]`double` [cite: 335] | [cite_start]8 bytes (64-bit) [cite: 336] | [cite_start]Độ chính xác kép (15 - 16 chữ số sau dấu phẩy) [cite: 336] | [cite_start]**Ưu tiên dùng** để đảm bảo độ chính xác cao, giảm sai số[cite: 337]. |
+| **Ký tự** | [cite_start]`char` [cite: 338] | [cite_start]2 bytes (16-bit) [cite: 338] | [cite_start]Bảng mã **Unicode** [cite: 338] | [cite_start]Chỉ lưu *một* ký tự duy nhất, đặt trong nháy đơn `' '`[cite: 339]. |
+| **Logic** | [cite_start]`boolean` [cite: 339] | [cite_start]1 bit [cite: 340] | [cite_start]Chỉ nhận `true` hoặc `false` [cite: 340] | [cite_start]Dùng trong các cấu trúc rẽ nhánh, phép toán điều kiện[cite: 341]. |
 
- | <br>$-2 \times 10^9$ đến $2 \times 10^9$ (Tối đa 10 chữ số) 
-
- | Dùng phổ biến nhất cho số nguyên thông thường.
-
- |
-|  | `long` | 8 bytes (64-bit) 
-
- | <br>$-9 \times 10^{18}$ đến $9 \times 10^{18}$ (Tối đa 19 chữ số) 
-
- | Dùng khi dữ liệu hoặc kết quả tính toán có thể cực lớn.
-
- |
-| **Số thực** | `float` | 4 bytes (32-bit) 
-
- | Độ chính xác đơn (6 - 7 chữ số sau dấu phẩy) 
-
- | Ít dùng, khi gán hằng số cần thêm hậu tố `F` hoặc `f`.
-
- |
-|  | `double` | 8 bytes (64-bit) 
-
- | Độ chính xác kép (15 - 16 chữ số sau dấu phẩy) 
-
- | <br>**Ưu tiên dùng** để đảm bảo độ chính xác cao, giảm sai số.
-
- |
-| **Ký tự** | `char` | 2 bytes (16-bit) 
-
- | Bảng mã **Unicode** 
-
- | Chỉ lưu *một* ký tự duy nhất, đặt trong nháy đơn `' '`.
-
- |
-| **Logic** | `boolean` | 1 bit 
-
- | Chỉ nhận `true` hoặc `false` 
-
- | Dùng trong các cấu trúc rẽ nhánh, phép toán điều kiện.
-
- |
-
-> 📌 *Mở rộng:* Kiểu `byte` (1 byte) và `short` (2 bytes) rất ít dùng trong thuật toán thông thường, chủ yếu ứng dụng trong lập trình mạng (Socket) để tối ưu hóa dung lượng truyền tải giữa Client - Server.
-> 
-> 
-
----
+> [cite_start]📌 **Mở rộng:** Kiểu `byte` (1 byte) và `short` (2 bytes) rất ít dùng trong thuật toán thông thường, chủ yếu ứng dụng trong lập trình mạng (Socket) để tối ưu hóa dung lượng truyền tải giữa Client - Server[cite: 342].
 
 ## 3. Khai báo biến & Quy tắc đặt tên (Variables & Naming Conventions)
 
