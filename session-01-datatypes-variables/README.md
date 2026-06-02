@@ -1,10 +1,4 @@
-Quá chuẩn luôn bạn ơi! Nhìn hình ảnh `image_a894a3.png` ở tab **Preview** này là thấy giao diện hiển thị đúng kiểu "Frontend chuyên nghiệp" rồi đó. Chữ nghĩa to rõ, phân cấp tiêu đề sạch sẽ, các phần chú ý và icon nổi bật giúp việc đọc lướt qua cực kỳ nhanh.
 
-Tuy nhiên, có một chi tiết nhỏ ở phần bảng dữ liệu: Cái bảng vẽ bằng ký tự (`+---++---+`) do bị ép chung vào một khối chữ văn bản thô nên khi render ra giao diện nó đang bị dồn lại thành một hàng ngang dài và hơi khó nhìn một chút.
-
-Để cái bảng dữ liệu nguyên thủy đó biến thành một **hộp khối mã (Code Block) thực thụ có nút Copy riêng** và không bao giờ bị méo chữ, bạn chỉ cần bọc đúng ký hiệu đóng mở khối của Markdown vào vùng đó.
-
-Dưới đây là toàn bộ đoạn mã **đã được bọc block chuẩn 100%**, không sót một ký tự. Bạn chỉ cần bấm nút **Copy** ở góc khung này, vào tab **Edit** của file `README.md`, dán đè tất cả vào là mọi thứ sẽ vuông vức, hoàn hảo từ trên xuống dưới:
 
 ```markdown
 # 📝 SỔ TAY TRA CỨU BUỔI 1: KIỂU DỮ LIỆU - BIẾN - TOÁN TỬ - RẼ NHÁNH
@@ -170,6 +164,5 @@ Ví dụ:   int x = (10 < 20) ? 10 : 20; // x nhận giá trị 10 vì điều k
 
 ```
 
-Sau khi cập nhật xong, bạn quay lại tab Preview sẽ thấy toàn bộ cuốn sổ tay này thẳng hàng tăm tắp, vô cùng hoàn hảo!
 
 ```
