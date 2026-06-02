@@ -24,7 +24,7 @@
 
 ### 🚨 Quy tắc đặt tên biến và Name Convention (Chuẩn Java):
 
-```text
+```
 - KHÔNG bắt đầu bằng chữ số (Ví dụ sai: 1dientich, 2chuvi).
 - KHÔNG chứa dấu cách và các ký tự đặc biệt (Ví dụ sai: ban kinh, dien#tich).
 - KHÔNG trùng với từ khóa hệ thống (int, main, for, while, switch...).
