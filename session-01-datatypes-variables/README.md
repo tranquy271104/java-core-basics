@@ -19,8 +19,7 @@
 * Tên của `public class` phải trùng hoàn toàn với tên file `.java`.
 
 
-* 
-**Gói (`package`):** Dùng để phân loại và quản lý các file mã nguồn (như các thư mục nhỏ).
+* **Gói (`package`):** Dùng để phân loại và quản lý các file mã nguồn (như các thư mục nhỏ).
 
 
 * ⚠️ **Lưu ý khi nộp bài chấm tự động (OJ):** Khi nộp bài lên các hệ thống online như OJ, **phải xóa dòng khai báo `package**` ở đầu file để tránh bị lỗi biên dịch (CE).
@@ -28,8 +27,7 @@
 
 
 
-* 
-**Hàm `main` (Điểm khởi đầu):** Là nơi chương trình bắt đầu thực thi.
+* **Hàm `main` (Điểm khởi đầu):** Là nơi chương trình bắt đầu thực thi.
 
 
 ```java
@@ -131,8 +129,7 @@ int x, y, z;                        [cite_start]// Khai báo nhiều biến cùn
 
 ### Quy chuẩn đặt tên của cộng đồng Java (CamelCase Convention)
 
-* 
-**Quy tắc Lạc đà (camelCase):** Từ đầu tiên viết thường toàn bộ, các từ tiếp theo viết hoa chữ cái đầu tiên (Ví dụ: `banKinh`, `dienTich`, `luongNhanVien`, `diemTrungBinh`). Đây là tiêu chuẩn chung bắt buộc toàn cầu khi đi học và đi làm.
+* **Quy tắc Lạc đà (camelCase):** Từ đầu tiên viết thường toàn bộ, các từ tiếp theo viết hoa chữ cái đầu tiên (Ví dụ: `banKinh`, `dienTich`, `luongNhanVien`, `diemTrungBinh`). Đây là tiêu chuẩn chung bắt buộc toàn cầu khi đi học và đi làm.
 
 
 
@@ -142,31 +139,25 @@ int x, y, z;                        [cite_start]// Khai báo nhiều biến cùn
 
 ### Các toán tử cơ bản
 
-* 
-`+`, `-`, `*`, `/` (Phép chia).
+* `+`, `-`, `*`, `/` (Phép chia).
 
 
-* 
-`%` (Phép chia lấy dư): Chỉ lấy phần dư của phép chia nguyên (Ví dụ: `10 % 3 = 1`, `1 % 10 = 1`).
+* `%` (Phép chia lấy dư): Chỉ lấy phần dư của phép chia nguyên (Ví dụ: `10 % 3 = 1`, `1 % 10 = 1`).
 
 
 
 ### ⚠️ 4 Quy tắc tính toán ngầm định buộc phải nằm lòng
 
-1. 
-**Biểu thức toàn số nguyên (`int`, `long`...):** Kết quả trả về luôn luôn là một số nguyên (mất phần thập phân). Ví dụ: `100 / 30 = 3`.
+1. **Biểu thức toàn số nguyên (`int`, `long`...):** Kết quả trả về luôn luôn là một số nguyên (mất phần thập phân). Ví dụ: `100 / 30 = 3`.
 
 
-2. 
-**Biểu thức chứa ít nhất một số thực (`float`, `double`):** Kết quả tự động chuyển sang số thực. Ví dụ: `100 / 30.0 = 3.3333`.
+2. **Biểu thức chứa ít nhất một số thực (`float`, `double`):** Kết quả tự động chuyển sang số thực. Ví dụ: `100 / 30.0 = 3.3333`.
 
 
-3. 
-**Biểu thức gồm các toán hạng `int`:** Kết quả trung gian tạm thời được lưu trữ dưới kiểu `int` trước khi gán sang biến nhận.
+3. **Biểu thức gồm các toán hạng `int`:** Kết quả trung gian tạm thời được lưu trữ dưới kiểu `int` trước khi gán sang biến nhận.
 
 
-4. 
-**Biểu thức chứa ít nhất một toán hạng `long`:** Toàn bộ biểu thức tính toán sẽ tự động được xử lý dưới kiểu `long`.
+4. **Biểu thức chứa ít nhất một toán hạng `long`:** Toàn bộ biểu thức tính toán sẽ tự động được xử lý dưới kiểu `long`.
 
 
 
@@ -209,16 +200,13 @@ long tich3 = a * b * 1L;   // Sai! [cite_start]Phép toán tính từ trái qua 
 
 ### Xuất dữ liệu ra màn hình (Output)
 
-* 
-`System.out.print()`: In dữ liệu nhưng không tự động xuống dòng.
+* `System.out.print()`: In dữ liệu nhưng không tự động xuống dòng.
 
 
-* 
-`System.out.println()`: In dữ liệu và **tự động xuống dòng** (viết tắt của print line).
+* `System.out.println()`: In dữ liệu và **tự động xuống dòng** (viết tắt của print line).
 
 
-* 
-`System.out.printf()`: In dữ liệu theo đặc tả/định dạng (tương tự ngôn ngữ C). Đặc biệt hữu ích khi giới hạn số chữ số sau dấu thập phân.
+* `System.out.printf()`: In dữ liệu theo đặc tả/định dạng (tương tự ngôn ngữ C). Đặc biệt hữu ích khi giới hạn số chữ số sau dấu thập phân.
 
 
 * Cú pháp in số thực lấy 2 chữ số sau dấu phẩy kèm xuống dòng (`\n`):
@@ -230,8 +218,7 @@ long tich3 = a * b * 1L;   // Sai! [cite_start]Phép toán tính từ trái qua 
 
 
 
-* 
-**Phép nối chuỗi (`+`):** Khi nối một chuỗi văn bản với một biến số, Java tự động chuyển đổi biến số đó thành chuỗi văn bản để ghép lại với nhau.
+* **Phép nối chuỗi (`+`):** Khi nối một chuỗi văn bản với một biến số, Java tự động chuyển đổi biến số đó thành chuỗi văn bản để ghép lại với nhau.
 
 
 ```java
@@ -271,24 +258,19 @@ sc.close(); [cite_start]// Đóng Scanner để giải phóng tài nguyên hệ 
 
 Các hàm toán học nằm trong lớp `Math` được tích hợp sẵn trong nhân Java, không cần cài đặt hay import thư viện ngoài.
 
-* 
-`Math.abs(x)`: Trả về giá trị tuyệt đối của số $x$.
+* `Math.abs(x)`: Trả về giá trị tuyệt đối của số $x$.
 
 
-* 
-`Math.max(a, b)` / `Math.min(a, b)`: Trả về số lớn nhất / nhỏ nhất giữa 2 số.
+* `Math.max(a, b)` / `Math.min(a, b)`: Trả về số lớn nhất / nhỏ nhất giữa 2 số.
 
 
-* 
-`Math.sqrt(x)`: Tính căn bậc hai $\sqrt{x}$ (Trả về dữ liệu kiểu `double`).
+* `Math.sqrt(x)`: Tính căn bậc hai $\sqrt{x}$ (Trả về dữ liệu kiểu `double`).
 
 
-* 
-`Math.cbrt(x)`: Tính căn bậc ba $\sqrt[3]{x}$ (Trả về dữ liệu kiểu `double`).
+* `Math.cbrt(x)`: Tính căn bậc ba $\sqrt[3]{x}$ (Trả về dữ liệu kiểu `double`).
 
 
-* 
-`Math.pow(x, y)`: Tính lũy thừa $x^y$ (Trả về dữ liệu kiểu `double`).
+* `Math.pow(x, y)`: Tính lũy thừa $x^y$ (Trả về dữ liệu kiểu `double`).
 
 
 
