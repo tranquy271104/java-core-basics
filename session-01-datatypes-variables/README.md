@@ -144,7 +144,7 @@ Gồm: `+`, `-`, `*`, `/` (chia), `%` (chia dư).
 
 ### 5. Cấu trúc rẽ nhánh (Conditional Statements)
 
-**a. Cấu trúc `if`, `if-else`, `else if**`
+a. Cấu trúc `if`, `if-else`, `else if**`
 Dùng để điều hướng chương trình dựa trên điều kiện. Khi một nhánh `else if` thỏa mãn, toàn bộ khối cấu trúc sẽ kết thúc.
 
 ```java
@@ -158,7 +158,7 @@ if (condition1) {
 
 ```
 
-**b. Cấu trúc `switch-case**`
+b. Cấu trúc `switch-case**`
 So sánh giá trị của một biến (`val`) với các trường hợp cố định. Cần có `break` để tránh lọt xuống các case phía dưới.
 
 ```java
