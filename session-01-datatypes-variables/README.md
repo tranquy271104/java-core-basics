@@ -1,171 +1,247 @@
 
 ```markdown
-# 📝 SỔ TAY TRA CỨU BUỔI 1: KIỂU DỮ LIỆU - BIẾN - TOÁN TỬ - RẼ NHÁNH
+# ☕ CƠ BẢN VỀ JAVA: KIỂU DỮ LIỆU, BIẾN, TOÁN TỬ & RẼ NHÁNH
+
+> [cite_start]📌 **Nguồn tài liệu:** Lộ trình phát triển tư duy lập trình viên 28Tech[cite: 4, 12, 140].
+> [cite_start]🎯 **Mục tiêu mục này:** Làm chủ cú pháp căn bản, kiểm soát bộ nhớ RAM và phòng chống các bẫy logic/tràn số khi chấm bài tự động trên hệ thống (OJ)[cite: 15, 27, 240].
 
 ---
 
-## 1. Hệ Thống Kiểu Dữ Liệu Nguyên Thủy (Primitive Data Types)
+## 📂 1. Hệ Thống Kiểu Dữ Liệu & Biến (Data Types & Variables)
 
-``` '
-+--------------+-----------+----------------------------------------------------+
-| Kiểu dữ liệu | Kích thước| Phạm vi giá trị / Đặc tính cốt lõi (28Tech)        |
-+--------------+-----------+----------------------------------------------------+
-| byte         | 1 byte    | -128 đến 127                                       |
-| short        | 2 byte    | -32,768 đến 32,767                                 |
-| int          | 4 byte    | -2^31 đến 2^31 - 1 (~2 tỷ) -> Kiểu số nguyên gốc  |
-| long         | 8 byte    | -2^63 đến 2^63 - 1 (Số rất lớn) -> Cần hậu tố 'L'  |
-| float        | 4 byte    | Số thực thập phân, chính xác 6-7 chữ số (Đuôi 'F') |
-| double       | 8 byte    | Số thực thập phân, chính xác 15 chữ số (Mặc định)  |
-| char         | 2 byte    | Lưu 1 kí tự đơn duy nhất, bọc trong dấu nháy đơn'' |
-| boolean      | 1 byte    | Chỉ nhận 2 giá trị duy nhất: true hoặc false       |
-+--------------+-----------+----------------------------------------------------+
+### a. Bảng tra cứu kích thước bộ nhớ
+Java là ngôn ngữ lập trình định kiểu nghiêm ngặt. [cite_start]Cần ghi nhớ kích thước của từng kiểu dữ liệu nguyên thủy để tối ưu hóa thuật toán[cite: 15, 17]:
+
+| Kiểu dữ liệu | Kích thước | [cite_start]Phạm vi giá trị & Đặc tính cốt lõi [cite: 17] |
+| :--- | :---: | :--- |
+| `byte` | 1 byte | [cite_start]Từ $-128$ đến $127$ [cite: 17] |
+| `short` | 2 byte | [cite_start]Từ $-32,768$ đến $32,767$ [cite: 17] |
+| `int` | 4 byte | Từ $-2^{31}$ đến $2^{31}-1$ (~2 tỷ). [cite_start]**Là kiểu số nguyên mặc định.** [cite: 17] |
+| `long` | 8 byte | Từ $-2^{63}$ đến $2^{63}-1$. [cite_start]**Dùng cho số cực lớn, cần hậu tố `L` hoặc `l`.** [cite: 17, 120] |
+| `float` | 4 byte | Số thực độ chính xác từ 6 - 7 chữ số sau dấu phẩy. [cite_start]**Cần hậu tố `F` hoặc `f`.** [cite: 17, 121] |
+| `double` | 8 byte | Số thực độ chính xác tới 15 chữ số sau dấu phẩy. [cite_start]**Kiểu số thực mặc định.** [cite: 17, 122] |
+| `char` | 2 byte | [cite_start]Lưu 1 kí tự đơn duy nhất, bọc trong dấu nháy đơn `' '`[cite: 17, 131]. |
+| `boolean` | 1 byte | [cite_start]Chỉ nhận một trong hai giá trị logic: `true` hoặc `false`[cite: 17, 132]. |
+
+### b. Quy tắc đặt tên biến & Name Convention
+```text
+1. [cite_start]KHÔNG bắt đầu bằng chữ số (Ví dụ sai: 1dientich, 2chuvi)[cite: 48].
+2. [cite_start]KHÔNG chứa khoảng trắng hay ký tự đặc biệt (Ví dụ sai: ban kinh, dien#tich)[cite: 48].
+3. [cite_start]KHÔNG trùng tên từ khóa của hệ thống (Ví dụ: int, main, for, while...)[cite: 48].
+4. [cite_start]CÓ phân biệt chữ hoa và chữ thường (Ví dụ: 'banKinh' và 'BanKinh' là khác nhau)[cite: 48].
+5. CAMELCASE (Quy tắc lạc đà): Viết thường từ đầu tiên, các từ tiếp theo viết 
+   [cite_start]hoa chữ cái đầu tiên (Ví dụ chuẩn: banKinh, dienTich, luongNhanVien)[cite: 63, 64].
 
 ```
 
-### 🚨 Quy tắc đặt tên biến và Name Convention (Chuẩn Java):
+### c. Chú thích (Comment) trong mã nguồn
 
-* **KHÔNG** bắt đầu bằng chữ số (Ví dụ sai: `1dientich`, `2chuvi`).
-
-
-* **KHÔNG** chứa dấu cách và các ký tự đặc biệt (Ví dụ sai: `ban kinh`, `dien#tich`).
+* 
+`// Chú thích dòng đơn`: Dùng để giải thích nhanh một dòng lệnh.
 
 
-* **KHÔNG** trùng với từ khóa hệ thống (`int`, `main`, `for`, `while`, `switch`...).
+* 
+`/* Chú thích nhiều dòng */`: Dùng để giải thích một cụm hoặc một thuật toán dài.
 
 
-* **PHÂN BIỆT** hoa thường (`banKinh` và `BanKinh` là 2 biến khác nhau hoàn toàn).
-
-
-* **CAMELCASE:** Viết thường từ đầu, viết hoa chữ cái đầu từ tiếp theo (Ví dụ: `banKinh`, `dienTich`, `diemTrungBinh`).
+* 
+*Lưu ý:* Chú thích sẽ tự động được loại bỏ hoàn toàn khi chương trình thực thi.
 
 
 
 ---
 
-## 2. Nhập Xuất Dữ Liệu Với Lớp Scanner
-
-### Cú pháp nhập xuất cơ bản:
+## 📥 2. Kỹ Thuật Nhập Xuất Dữ Liệu (Scanner & Print)
 
 ```java
-import java.util.Scanner; // Khai báo ở đầu file
+import java.util.Scanner; [cite_start]// Bắt buộc phải import thư viện lớp này ở đầu file [cite: 181]
 
-Scanner sc = new Scanner(System.in);
-
-int n = sc.nextInt();         // Nhập số nguyên kiểu int
-long m = sc.nextLong();       // Nhập số nguyên kiểu long
-float f = sc.nextFloat();     // Nhập số thực kiểu float
-double d = sc.nextDouble();   // Nhập số thực kiểu double
-char c = sc.next().charAt(0); // Nhập 1 ký tự từ bàn phím
-
-// LỖI CHÍ MẠNG: InputMismatchException xảy ra khi nhập sai kiểu dữ liệu
-// (Ví dụ biến yêu cầu int nhưng người dùng lại nhập chữ abc).
+public class Main {
+    public static void main(String[] args) {
+        [cite_start]// Khởi tạo đối tượng luồng nhập dữ liệu từ bàn phím [cite: 182, 183]
+        Scanner sc = new Scanner(System.in); 
+        
+        [cite_start]// Cú pháp đọc dữ liệu theo từng kiểu tương ứng [cite: 183, 184, 185]
+        int n = sc.nextInt();         
+        long m = sc.nextLong();       
+        float f = sc.nextFloat();     
+        double d = sc.nextDouble();   
+        char c = sc.nextLine().charAt(0); [cite_start]// Đọc ký tự đầu tiên của dòng [cite: 189]
+        
+        [cite_start]// 🚨 CHÚ Ý: Nhập sai kiểu dữ liệu sẽ quăng lỗi InputMismatchException[cite: 186, 187].
+        [cite_start]// Ví dụ: Đang dùng nextInt() nhưng người dùng lại nhập ký tự chữ hoặc số thực[cite: 188].
+    }
+}
 
 ```
 
-### 🌐 Định dạng hiển thị số thực (Lấy số chữ số sau dấu phẩy):
+### 🌐 Định dạng hiển thị số thực với độ chính xác cho trước
+
+Để kiểm soát số lượng chữ số phần thập phân hiển thị ra màn hình, ta sử dụng hàm `System.out.printf()` thay cho `print` thông thường:
 
 ```java
-System.out.printf("%.2f\n", chuVi);     // Lấy chính xác 2 chữ số thập phân
-System.out.printf("%.10f\n", dienTich); // Lấy chính xác 10 chữ số thập phân
+float chuVi = 3.18238f;
+double dienTich = 39.91293912391293d;
+
+System.out.printf("%.2f\n", chuVi);     [cite_start]// Output thực tế: 3.18 [cite: 167, 169]
+System.out.printf("%.10f\n", dienTich); [cite_start]// Output thực tế: 39.9129391239 [cite: 167, 169]
 
 ```
 
 ---
 
-## 3. Các "Bẫy" Toán Tử Toán Học Trên OJ (Cực Kỳ Quan Trọng)
+## ⚡ 3. Hệ Thống Toán Tử & Các "Bẫy" Thuật Toán
 
-### ❌ Bẫy 1: Phép chia nguyên (Mất phần thập phân)
+### a. 
 
-```text
-- Bản chất: Chia 2 số nguyên cho nhau, Java tự động bỏ sạch phần thập phân.
-- Ví dụ sai: int a = 300, b = 200; int c = a / b; -> c = 1 (Mất phần .5)
-- Cách sửa: Ép kiểu 1 trong 2 số về số thực: float d = (float) a / b; -> d = 1.50
+Danh sách toán tử toán học cốt lõi 
 
-```
+* 
+`+`, `-`, `*`: Cộng, trừ, nhân.
 
-### ❌ Bẫy 2: Tràn số (Overflow) khi nhân hai số nguyên lớn
 
-```text
-- Bản chất: Nhân 2 số int lớn vượt quá 2 tỷ thì tích sẽ bị tính toán sai, 
-  dù có dùng biến kiểu long để lưu kết quả dữ liệu vẫn bị rác.
-- Ví dụ sai: int a = 1000000, b = 1000000; long c = a * b; -> c = -727379968
-- Cách sửa (Can thiệp vào phép tính):
-  Cách 1: Ép kiểu một biến sang long:   long d = (long) a * b;
-  Cách 2: Nhân với hằng số 1L ở đầu:    long e = 1L * a * b;
+* 
+`/`: Chia lấy phần nguyên (Nếu cả 2 toán hạng đều là số nguyên).
 
-```
 
----
+* 
+`%`: Chia lấy phần dư.
 
-## 4. Bản Chất Bảng Mã ASCII & Mẹo Xử Lý Kí Tự
 
-```text
-Dải mã ASCII bắt buộc phải thuộc lòng:
-- Ký tự chữ cái IN HOA ('A' - 'Z') : Từ mã 65 đến 90.
-- Ký tự chữ cái in thường ('a' - 'z') : Từ mã 97 đến 122.
-- Ký tự chữ số ('0' - '9')         : Từ mã 48 đến 57.
 
-💡 Bản chất: Kiểu char được lưu bằng mã số nên hoàn toàn có thể cộng trừ.
+### 🚨 Bẫy 1: Chia mất phần thập phân (Integer Division)
 
-```
+* 
+**Nguyên nhân:** Chia 2 số nguyên cho nhau, Java sẽ tự động cắt bỏ hoàn toàn phần thập phân của thương số.
 
-### 🔥 Các câu lệnh kiểm tra và biến đổi ký tự tự chế:
+
+* 
+**Giải pháp:** Ít nhất 1 trong 2 toán hạng tham gia phép tính phải ở dạng số thực.
+
+
 
 ```java
-// Kiểm tra kí tự in thường: 
-if (c >= 'a' && c <= 'z') hoặc if (c >= 97 && c <= 122)
+int a = 300, b = 200;
+// Cách xử lý sai: int c = a / b; [cite_start]-> Trả về kết quả = 1 (Bị mất .5) [cite: 228]
+[cite_start]// Cách xử lý đúng: Ép kiểu một toán hạng sang kiểu float hoặc double [cite: 228]
+float d = (float) a / b; [cite_start]// Trả về kết quả chính xác = 1.50 [cite: 228]
 
-// Kiểm tra kí tự in hoa:    
-if (c >= 'A' && c <= 'Z') hoặc if (c >= 65 && c <= 90)
+```
 
-// Kiểm tra kí tự là chữ số: 
-if (c >= '0' && c <= '9') hoặc if (c >= 48 && c <= 57)
+### 🚨 Bẫy 2: Tràn số khi nhân hai số nguyên (Integer Overflow)
 
-// Đổi thường thành IN HOA (Trừ 32 đơn vị): 
-c = (char) (kyTuThuong - 32);
+* 
+**Nguyên nhân:** Tích của 2 số kiểu `int` vượt quá giới hạn ($\approx 2$ tỷ) sẽ bị lỗi dữ liệu rác ngay lập tức, ngay cả khi bạn khai báo biến lưu trữ là kiểu `long`.
 
-// Đổi hoa thành in thường (Cộng 32 đơn vị): 
-c = (char) (kyTuHoa + 32);
+
+* 
+**Giải pháp:** Phải can thiệp ép kiểu dữ liệu ngay trong quá trình tính toán.
+
+
+
+```java
+int a = 1000000, b = 1000000;
+// Cách xử lý sai: long c = a * b; [cite_start]-> Kết quả lỗi: -727379968 [cite: 247, 248, 251]
+
+[cite_start]// Cách xử lý đúng 1: Ép kiểu một trong hai biến sang long [cite: 250]
+long d = (long) a * b; [cite_start]// Kết quả chuẩn: 1000000000000 [cite: 250, 251]
+
+[cite_start]// Cách xử lý đúng 2: Nhân trực tiếp với hằng số kiểu long 1L ở đầu [cite: 250]
+long e = 1L * a * b;   [cite_start]// Kết quả chuẩn: 1000000000000 [cite: 250, 251]
+
+```
+
+### b. Các toán tử logic & So sánh nâng cao
+
+* 
+**Toán tử so sánh (Trả về đúng/sai):** `>`, `>=`, `<`, `<=`, `!=` (So sánh khác), `==` (So sánh bằng).
+
+
+* **Toán tử logic kết hợp nhiều biểu thức:**
+* 
+`&&` (Phép AND): Chỉ cho kết quả đúng khi mọi mệnh đề thành phần đều đúng.
+
+
+* 
+`||` (Phép OR): Chỉ cho kết quả sai khi tất cả đều sai, đúng khi có ít nhất 1 cái đúng.
+
+
+* 
+`!` (Phép NOT): Phủ định ngược lại giá trị logic hiện tại.
+
+
+
+
+* 
+**Toán tử tăng giảm đơn vị:** `++a` (Tăng trước khi tính), `a++` (Tăng sau khi tính), tương tự với `--`.
+
+
+* **Toán tử ba ngôi:** `[Biểu thức] ? [cite_start][Giá trị khi Đúng] : [Giá trị khi Sai];`.
+
+
+
+---
+
+## 🔤 4. Bản Chất Ký Tự & Bảng Mã ASCII
+
+Bản chất kiểu dữ liệu `char` được lưu trữ dưới dạng mã số nguyên trong bảng mã ASCII gồm 256 ký tự. Do đó, ký tự hoàn toàn có thể tham gia vào các phép tính cộng, trừ, nhân, chia. Khi tính toán, hệ thống sẽ tự động dùng mã số ASCII của nó.
+
+```text
+Dải mã ASCII cốt lõi bắt buộc phải thuộc lòng:
++ [cite_start]Ký tự chữ cái IN HOA ('A' - 'Z') : Từ mã số 65 đến 90[cite: 537].
++ [cite_start]Ký tự chữ cái in thường ('a' - 'z') : Từ mã số 97 đến 122[cite: 537].
++ [cite_start]Ký tự chữ số từ ('0' - '9')         : Từ mã số 48 đến 57[cite: 537].
+
+```
+
+### 🔥 Các đoạn code mẫu kiểm tra và xử lý biến đổi ký tự gốc (Thuộc bản chất)
+
+```java
+char c = 'a';
+
+// 1. Kiểm tra tính chất ký tự bằng khoảng ký tự hoặc mã số nguyên trực tiếp
+boolean isLower = (c >= 'a' && c <= 'z'); [cite_start]// Kiểm tra kí tự in thường [cite: 558, 559]
+boolean isUpper = (c >= 'A' && c <= 'Z'); [cite_start]// Kiểm tra kí tự in hoa [cite: 554, 561]
+boolean isDigit = (c >= '0' && c <= '9'); [cite_start]// Kiểm tra kí tự là chữ số [cite: 564, 566]
+
+[cite_start]// 2. Chuyển đổi ký tự (Dựa trên khoảng cách 32 đơn vị trong bảng mã ASCII) [cite: 568, 571]
+char upCase = (char) (c - 32);  [cite_start]// Biến 'a' thành chữ IN HOA 'A' tương ứng [cite: 570, 571, 572]
+char lowCase = (char) (c + 32); [cite_start]// Biến 'A' thành chữ in thường 'a' tương ứng [cite: 568, 569]
 
 ```
 
 ---
 
-## 5. Cấu Trúc Điều Khiển Rẽ Nhánh
+## 🔀 5. Các Cấu Trúc Điều Khiển Rẽ Nhánh (Control Structures)
 
-### a. Khối lệnh if - else if - else:
+### a. Khối lệnh `if` - `else if` - `else`
 
 ```text
-Hệ thống kiểm tra tuần tự từ trên xuống. Nếu một điều kiện đúng, khối lệnh 
-đó chạy và TOÀN BỘ cấu trúc rẽ nhánh này sẽ KẾT THÚC NGAY, không kiểm tra phía sau.
+[cite_start]Cơ chế vận hành quan trọng: Hệ thống kiểm tra tuần tự các điều kiện từ trên xuống[cite: 487]. 
+[cite_start]Ngay khi phát hiện ra MỘT điều kiện đúng, khối lệnh của nhánh đó sẽ được thực thi[cite: 487]. 
+[cite_start]Sau khi thực hiện xong, TOÀN BỘ cấu trúc rẽ nhánh này sẽ KẾT THÚC NGAY LẬP TỨC[cite: 487]. 
+[cite_start]Các điều kiện còn lại ở phía dưới (bao gồm cả khối else) sẽ bị bỏ qua hoàn toàn[cite: 487, 488].
 
 ```
 
-### b. Cấu trúc switch - case (🚨 Chú ý câu lệnh break):
+### b. Cấu trúc `switch` - `case` và lỗi chí mạng về từ khóa `break`
+
+Dùng để so sánh giá trị bằng cụ thể của một biến (`val` có thể là số, ký tự, hoặc chuỗi văn bản):
 
 ```java
 switch (val) {
     case 1:
-        // Code xử lý khi val == 1
-        break; // Bắt buộc phải có để thoát khối switch
+        [cite_start]// Đoạn mã thực thi khi val == 1 [cite: 503, 510, 511]
+        break; [cite_start]// Ép chương trình thoát khỏi khối switch ngay lập tức [cite: 506, 512]
     case 2:
-        // Code xử lý khi val == 2
-        break;
+        [cite_start]// Đoạn mã thực thi khi val == 2 [cite: 513, 514]
+        break; [cite_start]// [cite: 515]
     default:
-        // Code xử lý khi không khớp case nào ở trên
+        [cite_start]// Đoạn mã thực thi khi val không trùng khớp với bất kỳ trường hợp nào trên [cite: 504, 518, 519]
 }
-// LƯU Ý CHÍ MẠNG: Nếu thiếu "break;", chương trình sẽ bị hiện tượng "lọt rãnh"
-// (fall-through), tự động chạy lọt xuống các case dưới mà không kiểm tra lại.
+
+// 🚨 LƯU Ý CHÍ MẠNG: Nếu bạn bỏ quên câu lệnh "break;", chương trình sẽ rơi vào trạng thái
+[cite_start]// "lọt rãnh" (Fall-through) - tự động chạy tiếp xuống các case bên dưới mà không kiểm tra lại điều kiện[cite: 506].
 
 ```
 
-### c. Toán tử ba ngôi (Viết tắt rẽ nhánh ngắn gọn):
-
-```java
-Cú pháp: [Biến] = [Biểu thức so sánh] ? [Giá trị khi ĐÚNG] : [Giá trị khi SAI];
-Ví dụ:   int x = (10 < 20) ? 10 : 20; // x nhận giá trị 10 vì điều kiện ĐÚNG.
-
-
-
-
-```
