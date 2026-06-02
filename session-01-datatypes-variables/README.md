@@ -1,304 +1,215 @@
-# Java Basics: Data Types, Variables, Operators & Conditional Statements
+Dưới đây là toàn bộ file `README.md` đã được gộp chung vào một khối duy nhất. Cậu chỉ cần nhấn nút Copy ở góc trên cùng bên phải của khối code này và dán thẳng vào GitHub là xong nhé! 🚀
+
+```markdown
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Basics%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
+
+  <h1>☕ Tổng Hợp Kiến Thức Cơ Bản Java</h1>
+  <p><i>Tài liệu tóm tắt súc tích, dễ hiểu dành cho quá trình chinh phục ngôn ngữ Java.</i></p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
+    <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge" />
+  </p>
+</div>
+
+---
 
 ## 📖 Giới thiệu
+Kho lưu trữ này chứa các ghi chép chi tiết về nền tảng ngôn ngữ lập trình Java. Tài liệu được biên soạn lại một cách sạch sẽ, chuẩn Markdown, tập trung vào tính ứng dụng thực tế và rất phù hợp để tra cứu nhanh. 
 
-Repository này tổng hợp các kiến thức nền tảng của Java dành cho người mới bắt đầu, bao gồm:
+Nguồn tham khảo chính: **28TECH**.
 
-* Kiểu dữ liệu (Data Types)
-* Biến (Variables)
-* Chú thích (Comments)
-* Nhập/Xuất dữ liệu
-* Toán tử (Operators)
-* Cấu trúc rẽ nhánh (Conditional Statements)
-* Bảng mã ASCII và xử lý ký tự
-
-Đây là những kiến thức quan trọng trước khi học về vòng lặp, mảng, hàm và lập trình hướng đối tượng (OOP).
-
----
-
-## 📂 Nội dung
-
-### 1. Kiểu dữ liệu (Data Types)
-
-Java cung cấp nhiều kiểu dữ liệu nguyên thủy:
-
-| Kiểu dữ liệu | Kích thước |
-| ------------ | ---------- |
-| byte         | 1 byte     |
-| short        | 2 byte     |
-| int          | 4 byte     |
-| long         | 8 byte     |
-| float        | 4 byte     |
-| double       | 8 byte     |
-| char         | 2 byte     |
-| boolean      | 1 byte     |
-
-Ví dụ:
-
-```java
-int age = 20;
-double gpa = 3.75;
-char grade = 'A';
-boolean pass = true;
-```
+## 📑 Mục lục
+1. [Kiểu dữ liệu và Biến](#1-kiểu-dữ-liệu-và-biến-data-type--variable)
+2. [Chú thích (Comment) trong Java](#2-chú-thích-comment-trong-java)
+3. [Khai báo, Nhập và Xuất dữ liệu](#3-khai-báo-nhập-và-xuất-dữ-liệu)
+4. [Toán tử (Operators)](#4-toán-tử-operators)
+5. [Cấu trúc rẽ nhánh (Conditional Statements)](#5-cấu-trúc-rẽ-nhánh-conditional-statements)
+6. [Bảng mã ASCII và Xử lý Kí tự](#6-bảng-mã-ascii-và-xử-lý-kí-tự)
 
 ---
 
-### 2. Biến (Variables)
+## 🚀 Nội dung chi tiết
 
-Khai báo biến:
+### 1. Kiểu dữ liệu và Biến (Data Type & Variable)
 
-```java
-int number;
-double salary;
-char character;
-```
+**a. Kiểu dữ liệu**
+Java cung cấp các kiểu dữ liệu nguyên thủy để biểu diễn số nguyên, số thực, kí tự và giá trị đúng/sai:
 
-Khởi tạo biến:
+| Kiểu dữ liệu | Kích thước | Phạm vi giá trị / Ý nghĩa |
+| :--- | :--- | :--- |
+| `byte` | 1 byte | `-128` đến `127` |
+| `short` | 2 byte | `-32768` đến `32767` |
+| `int` | 4 byte | `-2^31` đến `2^31 - 1` |
+| `long` | 8 byte | `-2^63` đến `2^63 - 1` |
+| `float` | 4 byte | Số thực, độ chính xác 6 - 7 chữ số sau dấu phẩy. |
+| `double` | 8 byte | Số thực, độ chính xác tới 15 chữ số sau dấu phẩy. |
+| `char` | 2 byte | Lưu các kí tự. |
+| `boolean` | 1 byte | Lưu giá trị `true` hoặc `false`. |
 
-```java
-int age = 19;
-double score = 8.5;
-```
-
-Quy tắc đặt tên:
-
-✅ Hợp lệ:
-
-```java
-studentName
-averageScore
-totalSalary
-```
-
-❌ Không hợp lệ:
-
-```java
-1student
-student-name
-for
-while
-```
+**b. Biến và Quy tắc đặt tên**
+* **Khái niệm:** Biến dùng để lưu trữ giá trị trong bộ nhớ khi chương trình tính toán.
+* **Cú pháp:** `[Kiểu dữ liệu] [Tên biến];`
+* **Quy tắc bắt buộc:**
+    * Không bắt đầu bằng chữ số (Ví dụ sai: `1dientich`).
+    * Không chứa khoảng trắng và kí tự đặc biệt (Ví dụ sai: `ban kinh`, `dien#tich`).
+    * Không trùng từ khóa (`int`, `for`, `while`,...).
+    * Có phân biệt chữ hoa và chữ thường (`banKinh` khác `BanKinh`).
+* **Quy chuẩn đặt tên (CamelCase):** Chữ cái đầu tiên của từ đầu viết thường, các từ tiếp theo viết hoa chữ cái đầu (`banKinh`, `dienTich`, `luongNhanVien`).
 
 ---
 
-### 3. Comments
-
-Chú thích một dòng:
-
-```java
-// Đây là comment
-```
-
-Chú thích nhiều dòng:
-
-```java
-/*
-   Đây là
-   comment nhiều dòng
-*/
-```
+### 2. Chú thích (Comment) trong Java
+Chú thích dùng để giải thích code, giúp bảo trì code dễ dàng hơn và sẽ bị bỏ qua khi chương trình thực thi.
+* **Trên một dòng:** Dùng `//`
+* **Trên nhiều dòng:** Đặt giữa `/*` và `*/`
 
 ---
 
-### 4. Nhập xuất dữ liệu
+### 3. Khai báo, Nhập và Xuất dữ liệu
 
-Nhập dữ liệu với Scanner:
-
-```java
-Scanner sc = new Scanner(System.in);
-
-int n = sc.nextInt();
-double x = sc.nextDouble();
-String name = sc.nextLine();
-```
-
-Xuất dữ liệu:
+**Khai báo và Xuất dữ liệu**
+Sử dụng `System.out.println()` để in xuống dòng hoặc `System.out.printf()` để định dạng số thực.
 
 ```java
-System.out.println("Hello Java");
-System.out.printf("%.2f", 3.14159);
+public class Main {
+    public static void main(String[] args) {
+        int banKinh = 100;
+        long dienTich = 10182383812838123L; // Thêm L cho kiểu long
+        float PI = 3.14F;                  // Thêm F cho kiểu float
+        double temp = 30.89129391293D;
+        
+        System.out.println("Giá trị diện tích: " + dienTich);
+        
+        // In định dạng số thực lấy 2 chữ số sau dấu phẩy
+        float chuVi = 3.18238f;
+        System.out.printf("%.2f\n", chuVi); // Output: 3.18
+    }
+}
+
 ```
+
+**Nhập dữ liệu từ bàn phím**
+Sử dụng lớp `Scanner` trong gói `java.util`.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        long m = sc.nextLong();
+        float f = sc.nextFloat();
+        // Nhập 1 kí tự
+        char kiTu = sc.next().charAt(0); 
+    }
+}
+
+```
+
+> ⚠️ **Chú ý:** Nếu nhập sai kiểu dữ liệu (ví dụ nhập chữ vào `nextInt()`), chương trình sẽ ném ra ngoại lệ `InputMismatchException`.
 
 ---
 
-### 5. Toán tử (Operators)
+### 4. Toán tử (Operators)
 
-#### Toán tử số học
+**a. Toán tử toán học & Các lưu ý quan trọng**
+Gồm: `+`, `-`, `*`, `/` (chia), `%` (chia dư).
 
-```java
-+
--
-*
-/
-%
-```
+* **Lưu ý 1 (Phép chia nguyên):** Chia 2 số nguyên sẽ trả về số nguyên. Muốn lấy phần thập phân, ít nhất 1 trong 2 số phải là số thực. `float d = (float) 300 / 200; // 1.50`
+* **Lưu ý 2 (Tràn số):** Nhân 2 số `int` lớn có thể gây tràn số trước khi gán vào biến `long`. Cần ép kiểu dữ liệu trước khi nhân. `long d = (long) a * b;`
+* **Lưu ý 3 (Thứ tự ưu tiên):** Nhân chia trước, cộng trừ sau. Nên dùng dấu ngoặc đơn `()` để kiểm soát biểu thức.
 
-Ví dụ:
+**b. Toán tử so sánh và Logic**
 
-```java
-int a = 10;
-int b = 3;
+* **So sánh:** `>`, `>=`, `<`, `<=`, `!=` (khác), `==` (bằng). Trả về `true`/`false`.
+* **Logic:** * `&&` (AND): Chỉ đúng khi tất cả các mệnh đề đều đúng.
+* `\|\|` (OR): Chỉ sai khi tất cả các mệnh đề đều sai.
+* `!` (NOT): Phủ định giá trị logic hiện tại.
 
-System.out.println(a + b);
-System.out.println(a % b);
-```
 
-#### Toán tử so sánh
 
-```java
->
-<
->=
-<=
-==
-!=
-```
+**c. Toán tử tăng giảm (`++`, `--`)**
 
-Ví dụ:
+* `++a` / `--a`: Tăng/giảm giá trị của `a` trước rồi mới thực hiện phép tính.
+* `a++` / `a--`: Dùng giá trị hiện tại của `a` cho phép tính trước, sau đó mới tăng/giảm `a`.
 
-```java
-System.out.println(a > b);
-```
+**d. Toán tử ba ngôi**
 
-#### Toán tử logic
-
-```java
-&&
-||
-!
-```
-
-Ví dụ:
-
-```java
-if(a > 0 && b > 0){
-    System.out.println("Positive");
-}
-```
-
-#### Toán tử tăng giảm
-
-```java
-a++;
-++a;
-a--;
---a;
-```
-
-#### Toán tử ba ngôi
-
-```java
-int result = (a > b) ? a : b;
-```
+* **Cú pháp:** `[Biểu thức so sánh] ? [Giá trị khi đúng] : [Giá trị khi sai];`
+* *Ví dụ:* `int x = (10 < 20) ? 10 : 20;` -> `x` sẽ bằng `10`.
 
 ---
 
-### 6. Cấu trúc rẽ nhánh
+### 5. Cấu trúc rẽ nhánh (Conditional Statements)
 
-#### if
+**a. Cấu trúc `if`, `if-else`, `else if**`
+Dùng để điều hướng chương trình dựa trên điều kiện. Khi một nhánh `else if` thỏa mãn, toàn bộ khối cấu trúc sẽ kết thúc.
 
 ```java
-if(score >= 5){
-    System.out.println("Pass");
+if (condition1) {
+    // Code khi condition1 ĐÚNG
+} else if (condition2) {
+    // Code khi condition1 SAI và condition2 ĐÚNG
+} else {
+    // Code khi tất cả đều SAI
 }
+
 ```
 
-#### if - else
+**b. Cấu trúc `switch-case**`
+So sánh giá trị của một biến (`val`) với các trường hợp cố định. Cần có `break` để tránh lọt xuống các case phía dưới.
 
 ```java
-if(score >= 5){
-    System.out.println("Pass");
-}
-else{
-    System.out.println("Fail");
-}
-```
-
-#### if - else if
-
-```java
-if(score >= 8){
-    System.out.println("Excellent");
-}
-else if(score >= 6.5){
-    System.out.println("Good");
-}
-else{
-    System.out.println("Average");
-}
-```
-
-#### switch-case
-
-```java
-switch(day){
+switch(val) {
     case 1:
-        System.out.println("Monday");
+        // code
         break;
     case 2:
-        System.out.println("Tuesday");
+        // code
         break;
     default:
-        System.out.println("Unknown");
+        // code khi không trùng case nào
 }
+
 ```
 
 ---
 
-### 7. ASCII và xử lý ký tự
+### 6. Bảng mã ASCII và Xử lý Kí tự
 
-Kiểm tra chữ thường:
+Mỗi kí tự thuộc kiểu `char` đều có một mã số nguyên tương ứng trong bảng mã ASCII (gồm 256 kí tự). Bản chất kiểu `char` có thể đem đi cộng, trừ, nhân, chia như số nguyên.
 
-```java
-if(c >= 'a' && c <= 'z'){
-    System.out.println("Lowercase");
-}
-```
+**Các dải kí tự quan trọng:**
 
-Kiểm tra chữ hoa:
+* `A-Z`: `65 - 90`
+* `a-z`: `97 - 122`
+* `0-9`: `48 - 57`
 
-```java
-if(c >= 'A' && c <= 'Z'){
-    System.out.println("Uppercase");
-}
-```
+**Các câu lệnh kiểm tra và biến đổi cơ bản:**
 
-Kiểm tra chữ số:
-
-```java
-if(c >= '0' && c <= '9'){
-    System.out.println("Digit");
-}
-```
+* **Kiểm tra chữ thường:** `if (c >= 'a' && c <= 'z')`
+* **Kiểm tra chữ hoa:** `if (c >= 'A' && c <= 'Z')`
+* **Kiểm tra chữ số:** `if (c >= '0' && c <= '9')`
+* **Chuyển Thường thành Hoa:** `c -= 32;`
+* **Chuyển Hoa thành Thường:** `c += 32;`
 
 ---
 
-## 🎯 Mục tiêu
+## 🛠️ Công cụ sử dụng
 
-Sau khi hoàn thành phần này, bạn có thể:
-
-* Hiểu các kiểu dữ liệu trong Java
-* Khai báo và sử dụng biến
-* Sử dụng Scanner để nhập dữ liệu
-* Thực hiện các phép toán cơ bản
-* Viết điều kiện với if, else, switch-case
-* Xử lý ký tự bằng bảng mã ASCII
-
----
-
-## 🚀 Công nghệ sử dụng
-
-* Java SE
-* JDK 17+
-* IntelliJ IDEA / VS Code / Eclipse
-
----
+* **IDE tham khảo:** IntelliJ IDEA / Eclipse / VS Code
+* **Môi trường:** Java Development Kit (JDK) 11+
+* **Định dạng:** Markdown (`.md`)
 
 ## 👨‍💻 Tác giả
 
-Trần Quý
+**Trần Quý**
 
-Sinh viên Học viện Công nghệ Bưu chính Viễn thông (PTIT)
-
-Định hướng: Java Backend • Network • System • Cloud • DevOps
+* 🎓 Học viện Công nghệ Bưu chính Viễn thông (PTIT) - Cơ sở TP.HCM
+* 🎯 Định hướng: Software Engineering / DevOps / Digital Infrastructure Architect
+* 💡 Đam mê tìm hiểu hệ thống, tự động hóa hạ tầng và tối ưu hóa Data Structures & Algorithms.
