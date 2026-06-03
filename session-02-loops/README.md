@@ -1,14 +1,14 @@
-<<div align="center">
-  <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
 
-  <h1>🔁 Tổng Hợp Kiến Thức Vòng Lặp Java</h1>
-  <p><i>Tài liệu tóm tắt súc tích, dễ hiểu dành cho quá trình làm chủ các cấu trúc lặp trong Java.</i></p>
-  
-  <p>
-    <img src="[https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)" alt="Java Badge" />
-    <img src="[https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)" alt="Markdown Badge" />
-    <img src="[https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge](https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge)" alt="Status Badge" />
-  </p>
+  <h1>🔁 Tổng Hợp Kiến Thức Vòng Lặp Java</h1>
+  <p><i>Tài liệu tóm tắt súc tích, dễ hiểu dành cho quá trình làm chủ các cấu trúc lặp trong Java.</i></p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
+    <img src="https://img.shields.io/badge/Status-In__Progress-orange?style=for-the-badge" alt="Status Badge" />
+  </p>
 </div>
 
 ---
