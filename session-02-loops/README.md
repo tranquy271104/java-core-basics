@@ -30,16 +30,16 @@ Nguồn tham khảo chính: **28TECH**.
 ## 🚀 Nội dung chi tiết
 
 ### 1. Bản chất của Vòng lặp
-- Bài toán đặt ra: Hãy viết chương trình in ra 1000 dòng "Hello World!". Nếu gõ thủ công 1000 lệnh hiển thị sẽ khiến mã nguồn cực kỳ dài, rối và tối nghĩa.
-- Giải pháp: Vòng lặp (Loop) ra đời giúp lặp đi lặp lại một hoặc một nhóm câu lệnh mà không cần phải viết lại code nhiều lần.
+* **Bài toán đặt ra:** Hãy viết chương trình in ra 1000 dòng "Hello World!". Nếu gõ thủ công 1000 lệnh hiển thị sẽ khiến mã nguồn cực kỳ dài, rối và tối nghĩa.
+* **Giải pháp:** Vòng lặp (Loop) ra đời giúp lặp đi lặp lại một hoặc một nhóm câu lệnh mà không cần phải viết lại code nhiều lần.
 
 ---
 
 ### 2. Vòng lặp For
 
 **a. Khái niệm & Ứng dụng**
-- Vòng lặp for được sử dụng phổ biến nhất trong lập trình.
-- Thường được ưu tiên áp dụng khi chúng ta đã xác định hoặc biết trước số vòng lặp cần thực hiện.
+* Vòng lặp for được sử dụng phổ biến nhất trong lập trình.
+* Thường được ưu tiên áp dụng khi chúng ta đã xác định hoặc biết trước số vòng lặp cần thực hiện.
 
 **b. Cú pháp**
 Vòng lặp for gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`:
@@ -73,10 +73,9 @@ for (int i = 1; i <= 10; i += 2) {
 
 ### 3. Câu lệnh điều khiển Break và Continue
 
-Để kiểm soát luồng chạy của vòng lặp linh hoạt theo từng điều kiện, Java cung cấp các từ khóa điều khiển bổ sung:
+Để kiểm soát luồng chạy của vòng lặp linh hoạt theo từng điều kiện thuật toán, Java cung cấp hai câu lệnh điều khiển:
 
-- Câu lệnh break: Khi gặp từ khóa này, vòng lặp sẽ kết thúc và thoát ra ngay lập tức. Thông thường break sẽ đi kèm với cấu trúc if để kiểm tra điều kiện dừng sớm của thuật toán.
-
+* **Câu lệnh break:** Khi gặp từ khóa này, vòng lặp chứa nó sẽ lập tức kết thúc và thoát hẳn ra ngoài ngay mà không cần đợi điều kiện lặp chuyển sang sai.
 --------------------------------------------------------------------------------
 for (int i = 1; i <= 10; i++) {
     if (i == 5) {
@@ -86,13 +85,23 @@ for (int i = 1; i <= 10; i++) {
 }
 --------------------------------------------------------------------------------
 
+* **Câu lệnh continue:** Khi gặp từ khóa này, vòng lặp sẽ bỏ qua toàn bộ các câu lệnh còn lại nằm phía dưới nó trong lượt lặp hiện tại, để lập tức nhảy sang một lượt lặp mới (thực hiện phần câu lệnh cập nhật biến đếm đối với vòng for).
+--------------------------------------------------------------------------------
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue; // Bỏ qua lệnh in bên dưới khi i bằng 3 để nhảy sang lượt i = 4
+    }
+    System.out.print(i + " "); // Output: 1 2 4 5 (Không in số 3)
+}
+--------------------------------------------------------------------------------
+
 ---
 
 ### 4. Vòng lặp While
 
 **a. Cấu trúc và Hoạt động**
-- Vòng lặp while được sử dụng khi chưa xác định được số vòng lặp cụ thể cần thực hiện.
-- Hệ thống sẽ kiểm tra điều kiện trước. Chừng nào điều kiện lặp còn đúng (true) thì khối lệnh bên trong thân while còn tiếp tục thực thi.
+* Vòng lặp while được sử dụng khi chưa xác định được số vòng lặp cụ thể cần thực hiện.
+* Hệ thống sẽ kiểm tra điều kiện trước. Chừng nào điều kiện lặp còn đúng (true) thì khối lệnh bên trong thân while còn tiếp tục thực thi.
 
 -> while ([Điều kiện lặp]) {
 ->     // Các câu lệnh của vòng lặp
@@ -126,8 +135,8 @@ System.out.println("Tổng các chữ số: " + sum); // Output: 10
 ### 5. Vòng lặp Do-While
 
 **a. Bản chất và Điểm khác biệt chí mạng**
-- Vòng lặp do-while hoạt động tương tự như vòng while nhưng có một điểm khác biệt cực lớn: Nó luôn luôn thực thi khối lệnh bên trong ít nhất 1 lần đầu tiên, sau đó mới tiến hành kiểm tra điều kiện lặp.
-- Thường dùng khi chưa xác định số vòng lặp nhưng bắt buộc hệ thống phải chạy mẫu trước một lượt.
+* Vòng lặp do-while hoạt động tương tự như vòng while nhưng có một điểm khác biệt cực lớn: Nó luôn luôn thực thi khối lệnh bên trong ít nhất 1 lần đầu tiên, sau đó mới tiến hành kiểm tra điều kiện lặp.
+* Thường dùng khi chưa xác định số vòng lặp nhưng bắt buộc hệ thống phải chạy mẫu trước một lượt.
 
 -> do {
 ->     // Khối câu lệnh bên trong vòng lặp do-while
