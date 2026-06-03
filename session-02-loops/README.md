@@ -1,14 +1,3 @@
-Nhìn hình ảnh `image_0491b6.png` bạn gửi, mình đã thấy lỗi rồi! Lần này lỗi nằm ở chỗ các đoạn code mẫu Java đáng lẽ phải được nằm trong một khối hộp màu xám đen (Code Block) có nút copy biệt lập.
-
-Thế nhưng trên giao diện Preview hiện tại, chúng lại bị biến thành các dòng chữ trần in đậm với kích thước siêu to khổng lồ (`// Ví dụ 2: Nhảy bước...`, `for (int i = 1;...`).
-
-Lý do là vì khi mình bọc toàn bộ file vào khối ````text`, các ký tự gạch ngang dài `-----------------` phân tách giữa các phần đã vô tình bị trình biên dịch của GitHub hiểu nhầm thành cú pháp tạo tiêu đề lớn (Heading), làm đẩy toàn bộ code Java tuột xích ra ngoài và phóng to chữ lên.
-
-Để dứt điểm tình trạng này, mình đã thay thế toàn bộ các đường kẻ lỗi bằng đường phân cách chuẩn Markdown (`---`), đồng thời bọc riêng từng đoạn mã Java vào đúng khối code `java ` để nó hiển thị giao diện hộp đen chuyên nghiệp và sinh ra nút **Copy** riêng cho bạn.
-
-Bạn bấm nút **Copy** ở góc phải khung dưới đây, dán đè vào file `README.md` là mọi thứ sẽ chuẩn chỉ, thẳng hàng tăm tắp ở tab Preview:
-
-```markdown
 <div align="center">
   <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
 
