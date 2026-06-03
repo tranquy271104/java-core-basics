@@ -1,118 +1,205 @@
-# 🔁 SỔ TAY TRA CỨU BUỔI 3: CẤU TRÚC VÒNG LẶP (LOOPS)
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Basics%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
+
+  <h1>☕ Tổng Hợp Kiến Thức Cơ Bản Java</h1>
+  <p><i>Tài liệu tóm tắt súc tích, dễ hiểu dành cho quá trình chinh phục ngôn ngữ Java.</i></p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
+    <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge" />
+  </p>
+</div>
 
 ---
 
-## 1. Bản Chất Của Vòng Lặp
-- Bài toán đặt ra: Cần in ra 1000 dòng chữ "Hello World!". Nếu gõ thủ công 
-  1000 lệnh printf sẽ làm code cực kỳ dài và tối nghĩa.
-- Giải pháp: Sử dụng vòng lặp (Loop) để tái sử dụng một khối lệnh với số lần 
-  nhất định hoặc chừng nào điều kiện logic còn thỏa mãn.
+## 📖 Giới thiệu
+Kho lưu trữ này chứa các ghi chép chi tiết về nền tảng ngôn ngữ lập trình Java.
+
+Nguồn tham khảo chính: **28TECH**.
+
+## 📑 Mục lục
+1. [Kiểu dữ liệu và Biến](#1-kiểu-dữ-liệu-và-biến-data-type--variable)
+2. [Chú thích (Comment) trong Java](#2-chú-thích-comment-trong-java)
+3. [Khai báo, Nhập và Xuất dữ liệu](#3-khai-báo-nhập-và-xuất-dữ-liệu)
+4. [Toán tử (Operators)](#4-toán-tử-operators)
+5. [Cấu trúc rẽ nhánh (Conditional Statements)](#5-cấu-trúc-rẽ-nhánh-conditional-statements)
+6. [Bảng mã ASCII và Xử lý Kí tự](#6-bảng-mã-ascii-và-xử-lý-kí-tự)
 
 ---
 
-## 2. Vòng Lặp For
+## 🚀 Nội dung chi tiết
 
-### a. Cú pháp cơ bản
-for ([Câu lệnh khởi tạo]; [Điều kiện lặp]; [Câu lệnh cập nhật]) {
-    // Khối lệnh được thực thi khi điều kiện lặp trả về giá trị true
-}
+### 1. Kiểu dữ liệu và Biến (Data Type & Variable)
 
-### b. Thành phần cấu tạo (Gồm 3 phần chính cách nhau bằng dấu ';')
-- Câu lệnh khởi tạo: Khai báo và khởi tạo biến đếm (thường là i, j, k).
-- Điều kiện lặp: Kiểm tra trước mỗi vòng lặp. Nếu đúng (true) thì chạy tiếp, 
-  nếu sai (false) vòng lặp kết thúc ngay lập tức.
-- Câu lệnh cập nhật: Thay đổi giá trị biến đếm ngay sau khi khối lệnh 
-  bên trong vòng for thực hiện xong một lượt.
+**a. Kiểu dữ liệu**
+Java cung cấp các kiểu dữ liệu nguyên thủy để biểu diễn số nguyên, số thực, kí tự và giá trị đúng/sai:
 
-### c. Tư duy ứng dụng vòng For
-- Được sử dụng nhiều nhất trong lập trình thực tế.
-- Thường được ưu tiên áp dụng khi đã XÁC ĐỊNH TRƯỚC SỐ VÒNG LẶP cần thực hiện.
+| Kiểu dữ liệu | Kích thước | Phạm vi giá trị / Ý nghĩa |
+| :--- | :--- | :--- |
+| `byte` | 1 byte | `-128` đến `127` |
+| `short` | 2 byte | `-32768` đến `32767` |
+| `int` | 4 byte | `-2^31` đến `2^31 - 1` |
+| `long` | 8 byte | `-2^63` đến `2^63 - 1` |
+| `float` | 4 byte | Số thực, độ chính xác 6 - 7 chữ số sau dấu phẩy. |
+| `double` | 8 byte | Số thực, độ chính xác tới 15 chữ số sau dấu phẩy. |
+| `char` | 2 byte | Lưu các kí tự. |
+| `boolean` | 1 byte | Lưu giá trị `true` hoặc `false`. |
 
-### d. Đoạn mã thực hành mẫu vòng For
-// Ví dụ 1: In ra các số từ 1 đến 1000 tuần tự
-for (int i = 1; i <= 1000; i++) {
-    System.out.print(i + " ");
-}
-
-// Ví dụ 2: Vòng lặp nhảy bước (In ra các số lẻ từ 1 đến 10)
-for (int i = 1; i <= 10; i += 2) {
-    System.out.print(i + " "); // Output: 1 3 5 7 9
-}
-
-// 🚨 BẪY LỖI CHÍ MẠNG: Vòng lặp vô hạn (Infinite Loop)
-// Nếu khuyết điều kiện dừng, vòng lặp sẽ chạy vĩnh viễn làm treo hệ thống
-for (int i = 1; ; i++) { 
-    System.out.println(i); // Vòng lặp in ra vô hạn các số tự nhiên
-}
+**b. Biến và Quy tắc đặt tên**
+* **Khái niệm:** Biến dùng để lưu trữ giá trị trong bộ nhớ khi chương trình tính toán.
+* **Cú pháp:** `[Kiểu dữ liệu] [Tên biến];`
+* **Quy tắc bắt buộc:**
+    * Không bắt đầu bằng chữ số (Ví dụ sai: `1dientich`).
+    * Không chứa khoảng trắng và kí tự đặc biệt (Ví dụ sai: `ban kinh`, `dien#tich`).
+    * Không trùng từ khóa (`int`, `for`, `while`,...).
+    * Có phân biệt chữ hoa và chữ thường (`banKinh` khác `BanKinh`).
+* **Quy chuẩn đặt tên (CamelCase):** Chữ cái đầu tiên của từ đầu viết thường, các từ tiếp theo viết hoa chữ cái đầu (`banKinh`, `dienTich`, `luongNhanVien`).
 
 ---
 
-## 3. Câu Lệnh Điều Khiển Vòng Lặp: Break & Continue
+### 2. Chú thích (Comment) trong Java
+Chú thích dùng để giải thích code, giúp bảo trì code dễ dàng hơn và sẽ bị bỏ qua khi chương trình thực thi.
+* **Trên một dòng:** Dùng `//`
+* **Trên nhiều dòng:** Đặt giữa `/*` và `*/`
 
-### a. Câu lệnh Break
-- Ý nghĩa: Dùng để cưỡng ép dừng và thoát khỏi vòng lặp ngay lập tức mà không 
-  cần đợi điều kiện lặp chuyển sang sai.
-- Ứng dụng: Thường đi kèm với câu lệnh cấu trúc rẽ nhánh if để kiểm tra 
-  điều kiện dừng đặc biệt của thuật toán.
-for (int i = 1; i <= 10; i++) {
-    if (i == 5) {
-        break; // Vòng lặp lập tức kết thúc khi i bằng 5
+---
+
+### 3. Khai báo, Nhập và Xuất dữ liệu
+
+**Khai báo và Xuất dữ liệu**
+Sử dụng `System.out.println()` để in xuống dòng hoặc `System.out.printf()` để định dạng số thực.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int banKinh = 100;
+        long dienTich = 10182383812838123L; // Thêm L cho kiểu long
+        float PI = 3.14F;                  // Thêm F cho kiểu float
+        double temp = 30.89129391293D;
+        
+        System.out.println("Giá trị diện tích: " + dienTich);
+        
+        // In định dạng số thực lấy 2 chữ số sau dấu phẩy
+        float chuVi = 3.18238f;
+        System.out.printf("%.2f\n", chuVi); // Output: 3.18
     }
 }
 
----
+```
 
-## 4. Vòng Lặp While
+**Nhập dữ liệu từ bàn phím**
+Sử dụng lớp `Scanner` trong gói `java.util`.
 
-### a. Cú pháp cơ bản
-while ([Điều kiện lặp]) {
-    // Khối câu lệnh của vòng lặp
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        long m = sc.nextLong();
+        float f = sc.nextFloat();
+        // Nhập 1 kí tự
+        char kiTu = sc.next().charAt(0); 
+    }
 }
 
-### b. Tư duy ứng dụng vòng While
-- Được sử dụng khi CHƯA XÁC ĐỊNH ĐƯỢC SỐ VÒNG LẶP cần thực hiện cụ thể.
-- Khối lệnh bên trong chỉ được chạy khi điều kiện lặp trả về giá trị true.
-- 🚨 BẪY LỖI: Rất dễ bị lặp vĩnh viễn nếu quên câu lệnh cập nhật điều kiện dừng 
-  ở bên trong thân vòng lặp while.
+```
 
-### c. Kỹ thuật thuật toán kinh điển sử dụng While: Tách và Xử lý chữ số
-Đây là dạng bài tập cực kỳ phổ biến trên hệ thống OJ để phân tích cấu trúc 
-của một số nguyên:
-
-// Thuật toán 1: Tách và in từng chữ số hàng đơn vị từ phải qua trái
-int n = 1234;
-while (n != 0) {
-    System.out.println(n % 10); // Lấy chữ số hàng đơn vị (In ra: 4, 3, 2, 1)
-    n /= 10;                     // Loại bỏ chữ số hàng đơn vị vừa tách
-}
-
-// Thuật toán 2: Tính tổng các chữ số của một số nguyên nguyên bản
-int n = 1234;
-int sum = 0;
-while (n != 0) {
-    sum += n % 10; // Cộng dồn chữ số hàng đơn vị vào biến tổng
-    n /= 10;       // Làm mất số hàng đơn vị để chuyển sang số tiếp theo
-}
-System.out.println("Tổng các chữ số: " + sum); // Output: 10 (1+2+3+4)
+> ⚠️ **Chú ý:** Nếu nhập sai kiểu dữ liệu (ví dụ nhập chữ vào `nextInt()`), chương trình sẽ ném ra ngoại lệ `InputMismatchException`.
 
 ---
 
-## 5. Vòng Lặp Do - While
+### 4. Toán tử (Operators)
 
-### a. Cú pháp cơ bản
-do {
-    // Khối câu lệnh bên trong vòng lặp
-} while ([Điều kiện lặp]); // BẮT BUỘC có dấu chấm phẩy ';' ở cuối
+**a. Toán tử toán học & Các lưu ý quan trọng**
+Gồm: `+`, `-`, `*`, `/` (chia), `%` (chia dư).
 
-### b. Đặc tính khác biệt chí mạng
-- Hoạt động tương tự vòng while nhưng Do-While LUÔN LUÔN THỰC THI KHỐI CODE 
-  BÊN TRONG ÍT NHẤT 1 LẦN ĐẦU TIÊN, sau đó mới tiến hành kiểm tra điều kiện lặp.
-- Ứng dụng khi chưa xác định được số vòng lặp nhưng yêu cầu hệ thống phải 
-  chạy mẫu trước một lượt (Ví dụ: Menu lựa chọn, nhập dữ liệu kiểm thử).
+* **Lưu ý 1 (Phép chia nguyên):** Chia 2 số nguyên sẽ trả về số nguyên. Muốn lấy phần thập phân, ít nhất 1 trong 2 số phải là số thực. `float d = (float) 300 / 200; // 1.50`
+* **Lưu ý 2 (Tràn số):** Nhân 2 số `int` lớn có thể gây tràn số trước khi gán vào biến `long`. Cần ép kiểu dữ liệu trước khi nhân. `long d = (long) a * b;`
+* **Lưu ý 3 (Thứ tự ưu tiên):** Nhân chia trước, cộng trừ sau. Nên dùng dấu ngoặc đơn `()` để kiểm soát biểu thức.
 
-### c. Đoạn mã thực hành mẫu Do-While
-// Ví dụ 1: Điều kiện sai ngay từ đầu nhưng vẫn chạy 1 lần
-int i = 100;
-do {
-    System.out.println(i); // Vẫn in ra giá trị 100
-} while (i < 100);          // Kiểm tra thấy 100 < 100 là sai -> Thoát lặp.
+**b. Toán tử so sánh và Logic**
+
+* **So sánh:** `>`, `>=`, `<`, `<=`, `!=` (khác), `==` (bằng). Trả về `true`/`false`.
+* **Logic:** * `&&` (AND): Chỉ đúng khi tất cả các mệnh đề đều đúng.
+* `\|\|` (OR): Chỉ sai khi tất cả các mệnh đề đều sai.
+* `!` (NOT): Phủ định giá trị logic hiện tại.
+
+
+
+**c. Toán tử tăng giảm (`++`, `--`)**
+
+* `++a` / `--a`: Tăng/giảm giá trị của `a` trước rồi mới thực hiện phép tính.
+* `a++` / `a--`: Dùng giá trị hiện tại của `a` cho phép tính trước, sau đó mới tăng/giảm `a`.
+
+**d. Toán tử ba ngôi**
+
+* **Cú pháp:** `[Biểu thức so sánh] ? [Giá trị khi đúng] : [Giá trị khi sai];`
+* *Ví dụ:* `int x = (10 < 20) ? 10 : 20;` -> `x` sẽ bằng `10`.
+
+---
+
+### 5. Cấu trúc rẽ nhánh (Conditional Statements)
+
+a. Cấu trúc `if`, `if-else`, `else if`
+Dùng để điều hướng chương trình dựa trên điều kiện. Khi một nhánh `else if` thỏa mãn, toàn bộ khối cấu trúc sẽ kết thúc.
+
+```java
+if (condition1) {
+    // Code khi condition1 ĐÚNG
+} else if (condition2) {
+    // Code khi condition1 SAI và condition2 ĐÚNG
+} else {
+    // Code khi tất cả đều SAI
+}
+
+```
+
+b. Cấu trúc `switch-case`
+So sánh giá trị của một biến (`val`) với các trường hợp cố định. Cần có `break` để tránh lọt xuống các case phía dưới.
+
+```java
+switch(val) {
+    case 1:
+        // code
+        break;
+    case 2:
+        // code
+        break;
+    default:
+        // code khi không trùng case nào
+}
+
+```
+
+---
+
+### 6. Bảng mã ASCII và Xử lý Kí tự
+
+Mỗi kí tự thuộc kiểu `char` đều có một mã số nguyên tương ứng trong bảng mã ASCII (gồm 256 kí tự). Bản chất kiểu `char` có thể đem đi cộng, trừ, nhân, chia như số nguyên.
+
+**Các dải kí tự quan trọng:**
+
+* `A-Z`: `65 - 90`
+* `a-z`: `97 - 122`
+* `0-9`: `48 - 57`
+
+**Các câu lệnh kiểm tra và biến đổi cơ bản:**
+
+* **Kiểm tra chữ thường:** `if (c >= 'a' && c <= 'z')`
+* **Kiểm tra chữ hoa:** `if (c >= 'A' && c <= 'Z')`
+* **Kiểm tra chữ số:** `if (c >= '0' && c <= '9')`
+* **Chuyển Thường thành Hoa:** `c -= 32;`
+* **Chuyển Hoa thành Thường:** `c += 32;`
+
+---
+
+## 🛠️ Công cụ sử dụng
+
+* **IDE tham khảo:** IntelliJ IDEA / Eclipse / VS Code
+* **Môi trường:** Java Development Kit (JDK) 11+
+* **Định dạng:** Markdown (`.md`)
+
