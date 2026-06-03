@@ -1,12 +1,3 @@
-Nhìn hình ảnh `image_04eeb7.png` bạn gửi, các link ảnh banner và badge đang bị hiển thị lỗi thành chữ xanh (`Header Banner`, `Java Badge`, `Markdown Badge`, `Status Badge`).
-
-Nguyên nhân là do trong nội dung mình đưa ở bước trước, một số ký tự gạch dưới kép (`_`) ở các link ảnh như `Status-In__Progress-orange` vô tình kích hoạt định dạng in nghiêng của Markdown. Do đó, đường link bị đứt gãy và GitHub không thể tải ảnh lên được.
-
-Mình đã sửa lại toàn bộ các link ảnh chuẩn xác 100%, đồng thời tối ưu lại nội dung **Buổi 3: Vòng lặp Java**. Mình đã đóng gói tất cả vào trong đúng **một khối block (````text`) duy nhất** để bạn dễ dàng sao chép.
-
-Bạn hãy bấm nút **Copy** ở góc phải khung dưới đây, dán đè vào file `README.md`, sau đó bật tab **Preview** là giao diện sẽ hiện lên lung linh, không còn một lỗi nhỏ nào:
-
-```text
 <div align="center">
   <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
 
