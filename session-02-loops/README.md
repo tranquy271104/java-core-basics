@@ -1,22 +1,23 @@
+
 <div align="center">
-  <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
 
   <h1>🔁 Tổng Hợp Kiến Thức Vòng Lặp Java</h1>
   <p><i>Tài liệu tóm tắt súc tích, dễ hiểu dành cho quá trình làm chủ các cấu trúc lặp trong Java.</i></p>
   
   <p>
-    <img src="[https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)" alt="Java Badge" />
-    <img src="[https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)" alt="Markdown Badge" />
-    <img src="[https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge](https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge)" alt="Status Badge" />
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
+    <img src="https://img.shields.io/badge/Status-In_Progress-orange?style=for-the-badge" alt="Status Badge" />
   </p>
 </div>
 
 ---
 
 ## 📖 Giới thiệu
-Kho lưu trữ này chứa các ghi chép chi tiết về cấu trúc vòng lặp (Loops) trong ngôn ngữ lập trình Java.
+[cite_start]Kho lưu trữ này chứa các ghi chép chi tiết về cấu trúc vòng lặp (Loops) trong ngôn ngữ lập trình Java[cite: 583].
 
-Nguồn tham khảo chính: **28TECH**.
+[cite_start]Nguồn tham khảo chính: **28TECH**[cite: 578].
 
 ## 📑 Mục lục
 1. [Bản chất của Vòng lặp](#1-bản-chất-của-vòng-lặp)
@@ -39,7 +40,7 @@ Nguồn tham khảo chính: **28TECH**.
 
 **a. Khái niệm & Ứng dụng**
 * [cite_start]Vòng lặp `for` được sử dụng phổ biến nhất trong lập trình[cite: 620].
-* [cite_start]Thường được ưu tiên áp dụng khi chúng ta đã **xác định hoặc biết trước số vòng lặp** cần thực hiện[cite: 620].
+* [cite_start]Thường được ưu tiên áp dụng khi chúng ta đã xác định hoặc biết trước số vòng lặp cần thực hiện[cite: 620].
 
 **b. Cú pháp**
 [cite_start]Vòng lặp `for` gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`[cite: 600, 603]:
@@ -143,7 +144,7 @@ while ([Điều kiện lặp]) {
 
 ```
 
-> ⚠️ **CHÚ Ý:** Lỗi rất thường gặp khi sử dụng `while` là quên cập nhật biến điều kiện trong thân vòng lặp, dẫn đến việc chương trình bị lặp vĩnh viễn.
+> ⚠️ **CHÚ Ý:** Lỗi rất thường gặp khi sử dụng `while` là quên cập nhật biến điều kiện trong thân vòng lặp, dẫn đến việc chương trình bị **lặp vĩnh viễn**.
 > 
 > 
 
@@ -154,8 +155,8 @@ while ([Điều kiện lặp]) {
 // Thuật toán 1: Tách và in ra từng chữ số từ phải qua trái (hàng đơn vị trước)
 int n = 1234;
 while (n != 0) {
-    System.out.println(n % 10); // Lấy chữ số hàng đơn vị (In ra: 4, 3, 2, 1)
-    n /= 10;                     // Chia cho 10 để loại bỏ chữ số vừa in
+    System.out.println(n % 10); [cite_start]// Lấy chữ số hàng đơn vị (In ra: 4, 3, 2, 1) [cite: 731]
+    n /= 10;                     [cite_start]// Chia cho 10 để loại bỏ chữ số vừa in [cite: 732]
 }
 
 ```
@@ -165,10 +166,10 @@ while (n != 0) {
 int num = 1234;
 int sum = 0;
 while (num != 0) {
-    sum += num % 10; // Cộng dồn chữ số hàng đơn vị vào tổng
-    num /= 10;       // Loại bỏ chữ số hàng đơn vị
+    sum += num % 10; [cite_start]// Cộng dồn chữ số hàng đơn vị vào tổng [cite: 737]
+    num /= 10;       [cite_start]// Loại bỏ chữ số hàng đơn vị [cite: 738]
 }
-System.out.println("Tổng các chữ số: " + sum); // Output: 10
+System.out.println("Tổng các chữ số: " + sum); [cite_start]// Output: 10 [cite: 729, 742]
 
 ```
 
@@ -188,7 +189,7 @@ System.out.println("Tổng các chữ số: " + sum); // Output: 10
 ```java
 do {
      // Khối câu lệnh bên trong vòng lặp do-while
-} while ([Điều kiện lặp]); // 🚨 BẮT BUỘC phải có dấu chấm phẩy ';' ở cuối
+} while ([Điều kiện lặp]); // 🚨 BẮT BUỘC phải có dấu chấm phẩy ';' [cite_start]ở cuối [cite: 750]
 
 ```
 
@@ -199,7 +200,7 @@ int i = 100;
 
 // Dù điều kiện i < 100 bị SAI ngay từ đầu, khối lệnh vẫn chạy được 1 lần
 do {
-    System.out.println("Giá trị i: " + i); // Vẫn in ra: 100
+    System.out.println("Giá trị i: " + i); [cite_start]// Vẫn in ra: 100 [cite: 772]
 } while (i < 100);
 
 ```
@@ -217,7 +218,5 @@ do {
 * **Định dạng:** Markdown (.md)
 
 ```
-
-Bạn dán bản sạch này vào là tab Preview sẽ thẳng hàng tăm tắp, lung linh và không tì vết luôn nhé!
 
 ```
