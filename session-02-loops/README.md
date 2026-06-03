@@ -30,21 +30,24 @@ Nguồn tham khảo chính: **28TECH**.
 ## 🚀 Nội dung chi tiết
 
 ### 1. Bản chất của Vòng lặp
-* [cite_start]**Bài toán đặt ra:** Hãy viết chương trình in ra 1000 dòng "Hello World!"[cite: 591]. [cite_start]Nếu gõ thủ công 1000 lệnh hiển thị sẽ khiến mã nguồn cực kỳ dài, rối và tối nghĩa[cite: 590, 591].
-* [cite_start]**Giải pháp:** Vòng lặp (Loop) ra đời giúp lặp đi lặp lại một hoặc một nhóm câu lệnh mà không cần phải viết lại code nhiều lần[cite: 583, 602].
+* **Bài toán đặt ra:** Hãy viết chương trình in ra 1000 dòng "Hello World!". Nếu gõ thủ công 1000 lệnh hiển thị sẽ khiến mã nguồn cực kỳ dài, rối và tối nghĩa.
+* **Giải pháp:** Vòng lặp (Loop) ra đời giúp lặp đi lặp lại một hoặc một nhóm câu lệnh mà không cần phải viết lại code nhiều lần.
 
 ---
 
 ### 2. Vòng lặp For
 
 **a. Khái niệm & Ứng dụng**
-* [cite_start]Vòng lặp `for` được sử dụng phổ biến nhất trong lập trình[cite: 620].
-* [cite_start]Thường được ưu tiên áp dụng khi chúng ta đã **xác định hoặc biết trước số vòng lặp** cần thực hiện[cite: 620].
+* Vòng lặp for được sử dụng phổ biến nhất trong lập trình.
+* Thường được ưu tiên áp dụng khi chúng ta đã xác định hoặc biết trước số vòng lặp cần thực hiện.
 
 **b. Cú pháp**
-[cite_start]Vòng lặp `for` gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`[cite: 600, 603]:
+Vòng lặp for gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`:
 
 ```java
+for ([Câu lệnh khởi tạo]; [Điều kiện lặp]; [Câu lệnh cập nhật]) {
+    // Khối lệnh bên trong vòng lặp for
+}
 for ([Câu lệnh khởi tạo]; [Điều kiện lặp]; [Câu lệnh cập nhật]) {
     // Khối lệnh bên trong vòng lặp for
 }
