@@ -1,8 +1,3 @@
-Mình hiểu rồi, thành thật xin lỗi bạn nhé! Mình sơ suất quá, đầu tiên thì để là Slide 2 nhưng nội dung bên dưới lại ghi nhầm tiêu đề thành Buổi 1.
-
-Dưới đây là bản chỉnh sửa chuẩn xác 100%, giữ nguyên toàn bộ cấu trúc xịn xò của bạn (từ Banner, Mục lục, Bảng biểu cho đến cách chia mục 1, 2, 3...) nhưng **thay thế hoàn toàn bằng nội dung của Vòng lặp (Loops)** từ file PDF.
-
-Bạn chỉ cần bấm **Copy** toàn bộ khối block này rồi dán vào file `README.md` của thư mục vòng lặp là chuẩn chỉ luôn:
 
 ```markdown
 <div align="center">
