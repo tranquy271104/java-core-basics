@@ -1,10 +1,4 @@
-Thành thật xin lỗi bạn, mình đã quá sơ xuất khi để mã hệ thống tự động sinh `` dính chặt vào trong nội dung văn bản một lần nữa. Điều này làm hỏng mất giao diện Preview sạch sẽ mà bạn dày công thiết kế.
 
-Để khắc phục triệt để và không làm mất thêm thời gian của bạn, mình đã **bọc toàn bộ nội dung Markdown của Buổi 3 vào một khối code thô (````text`) duy nhất**. Mình cam đoan đã quét sạch 100% tất cả các thẻ trích dẫn lỗi, giữ lại một bản Note hoàn toàn sạch sẽ, ngắt dòng vuông vắn đúng theo cấu trúc banner/mục lục hiện tại của bạn.
-
-Bạn chỉ cần bấm **Copy** ở góc phải khung dưới đây, mở file `README.md` ra, xóa sạch code cũ và dán đè vào là xong:
-
-```text
 <div align="center">
   <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Loops%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
 
