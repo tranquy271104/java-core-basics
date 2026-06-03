@@ -44,7 +44,7 @@ Nguồn tham khảo chính: **28TECH**.
 **b. Cú pháp**
 Vòng lặp for gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`:
 
-```java
+
 Câu lệnh khởi tạo: Khai báo và khởi tạo một biến đóng vai trò làm biến đếm cho vòng lặp (thường là i, j, k).
 
 Điều kiện lặp: Biểu thức logic. Chừng nào điều kiện lặp còn đúng (true), vòng lặp còn tiếp tục chạy.
