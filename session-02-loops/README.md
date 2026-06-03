@@ -45,31 +45,15 @@ Nguồn tham khảo chính: **28TECH**.
 Vòng lặp for gồm 3 phần chính nằm trong cặp ngoặc tròn, phân tách nhau bắt buộc bằng hai dấu chấm phẩy `;`:
 
 ```java
-for ([Câu lệnh khởi tạo]; [Điều kiện lặp]; [Câu lệnh cập nhật]) {
-    // Khối lệnh bên trong vòng lặp for
-}
-for ([Câu lệnh khởi tạo]; [Điều kiện lặp]; [Câu lệnh cập nhật]) {
-    // Khối lệnh bên trong vòng lặp for
-}
+Câu lệnh khởi tạo: Khai báo và khởi tạo một biến đóng vai trò làm biến đếm cho vòng lặp (thường là i, j, k).
 
-```
+Điều kiện lặp: Biểu thức logic. Chừng nào điều kiện lặp còn đúng (true), vòng lặp còn tiếp tục chạy.
 
-* 
-**Câu lệnh khởi tạo:** Khai báo và khởi tạo một biến đóng vai trò làm biến đếm cho vòng lặp (thường là `i`, `j`, `k`).
+Câu lệnh cập nhật: Thay đổi giá trị của biến đếm ngay sau khi các câu lệnh bên trong thân for thực thi xong một lượt.
 
+c. Ví dụ mã nguồn mẫu
 
-* 
-**Điều kiện lặp:** Biểu thức logic. Chừng nào điều kiện lặp còn đúng (`true`), vòng lặp còn tiếp tục chạy.
-
-
-* 
-**Câu lệnh cập nhật:** Thay đổi giá trị của biến đếm ngay sau khi các câu lệnh bên trong thân `for` thực thi xong một lượt.
-
-
-
-**c. Ví dụ mã nguồn mẫu**
-
-```java
+Java
 public class Main {
     public static void main(String[] args) {
         // Ví dụ 1: In tuần tự các số tự nhiên từ 1 đến 1000
@@ -84,63 +68,38 @@ public class Main {
         }
     }
 }
+⚠️ Chú ý (Vòng lặp vô hạn): Nếu khuyết điều kiện lặp hoặc biến đếm không được cập nhật đúng cách, vòng lặp sẽ chạy vĩnh viễn gây treo chương trình.
+Ví dụ: for (int i = 1; ; i++) { ... } sẽ in ra vô hạn các số bắt đầu từ 1.
 
-```
-
-> ⚠️ **Chú ý (Vòng lặp vô hạn):** Nếu khuyết điều kiện lặp hoặc biến đếm không được cập nhật đúng cách, vòng lặp sẽ chạy vĩnh viễn gây treo chương trình.
-> *Ví dụ:* `for (int i = 1; ; i++) { ... }` sẽ in ra vô hạn các số bắt đầu từ 1.
-> 
-> 
-
----
-
-### 3. Câu lệnh điều khiển Break và Continue
-
+3. Câu lệnh điều khiển Break và Continue
 Để kiểm soát luồng chạy của vòng lặp linh hoạt theo từng điều kiện, Java cung cấp các từ khóa điều khiển bổ sung:
 
-* 
-**Câu lệnh `break`:** Khi gặp từ khóa này, vòng lặp sẽ **kết thúc và thoát ra ngay lập tức**. Thông thường `break` sẽ đi kèm với cấu trúc `if` để kiểm tra điều kiện dừng sớm của thuật toán.
+Câu lệnh break: Khi gặp từ khóa này, vòng lặp sẽ kết thúc và thoát ra ngay lập tức. Thông thường break sẽ đi kèm với cấu trúc if để kiểm tra điều kiện dừng sớm của thuật toán.
 
-
-
-```java
+Java
 for (int i = 1; i <= 10; i++) {
     if (i == 5) {
         break; // Thoát hẳn vòng lặp ngay khi i bằng 5
     }
     System.out.print(i + " "); // Output: 1 2 3 4
 }
+4. Vòng lặp While
+a. Cấu trúc và Hoạt động
 
-```
+Vòng lặp while được sử dụng khi chưa xác định được số vòng lặp cụ thể cần thực hiện.
 
----
+Hệ thống sẽ kiểm tra điều kiện trước. Chừng nào điều kiện lặp còn đúng (true) thì khối lệnh bên trong thân while còn tiếp tục thực thi.
 
-### 4. Vòng lặp While
-
-**a. Cấu trúc và Hoạt động**
-
-* Vòng lặp `while` được sử dụng khi **chưa xác định được số vòng lặp cụ thể** cần thực hiện.
-
-
-* Hệ thống sẽ kiểm tra điều kiện trước. Chừng nào điều kiện lặp còn đúng (`true`) thì khối lệnh bên trong thân `while` còn tiếp tục thực thi.
-
-
-
-```java
+Java
 while ([Điều kiện lặp]) {
     // Các câu lệnh của vòng lặp
 }
+⚠️ Chú ý: Lỗi rất thường gặp khi sử dụng while là quên cập nhật biến điều kiện trong thân vòng lặp, dẫn đến việc chương trình bị lặp vĩnh viễn.
 
-```
-
-> ⚠️ **Chú ý:** Lỗi rất thường gặp khi sử dụng `while` là quên cập nhật biến điều kiện trong thân vòng lặp, dẫn đến việc chương trình bị **lặp vĩnh viễn**.
-> 
-> 
-
-**b. Ứng dụng thuật toán kinh điển: Tách và Xử lý chữ số**
+b. Ứng dụng thuật toán kinh điển: Tách và Xử lý chữ số
 Đây là kỹ thuật nền tảng cực kỳ quan trọng dùng để giải quyết các bài toán phân tích cấu trúc của một số nguyên trên hệ thống OJ:
 
-```java
+Java
 public class Main {
     public static void main(String[] args) {
         // Thuật toán 1: Tách và in ra từng chữ số từ phải qua trái (hàng đơn vị trước)
@@ -160,32 +119,20 @@ public class Main {
         System.out.println("Tổng các chữ số: " + sum); // Output: 10
     }
 }
+5. Vòng lặp Do-While
+a. Bản chất và Điểm khác biệt chí mạng
 
-```
+Vòng lặp do-while hoạt động tương tự như vòng while nhưng có một điểm khác biệt cực lớn: Nó luôn luôn thực thi khối lệnh bên trong ít nhất 1 lần đầu tiên, sau đó mới tiến hành kiểm tra điều kiện lặp.
 
----
+Thường dùng khi chưa xác định số vòng lặp nhưng bắt buộc hệ thống phải chạy mẫu trước một lượt.
 
-### 5. Vòng lặp Do-While
-
-**a. Bản chất và Điểm khác biệt chí mạng**
-
-* Vòng lặp `do-while` hoạt động tương tự như vòng `while` nhưng có một điểm khác biệt cực lớn: **Nó luôn luôn thực thi khối lệnh bên trong ít nhất 1 lần đầu tiên**, sau đó mới tiến hành kiểm tra điều kiện lặp.
-
-
-* Thường dùng khi chưa xác định số vòng lặp nhưng bắt buộc hệ thống phải chạy mẫu trước một lượt.
-
-
-
-```java
+Java
 do {
     // Khối câu lệnh bên trong vòng lặp do-while
 } while ([Điều kiện lặp]); // 🚨 BẮT BUỘC phải có dấu chấm phẩy ';' ở cuối
+b. Ví dụ minh họa
 
-```
-
-**b. Ví dụ minh họa**
-
-```java
+Java
 public class Main {
     public static void main(String[] args) {
         int i = 100;
@@ -196,20 +143,14 @@ public class Main {
         } while (i < 100);
     }
 }
+⚠️ Lỗi cú pháp phổ biến: Thiếu dấu chấm phẩy ; đằng sau từ khóa đóng ngoặc của while([Điều kiện lặp]); làm chương trình báo lỗi biên dịch.
 
-```
+🛠️ Công cụ sử dụng
+IDE tham khảo: IntelliJ IDEA / Eclipse / VS Code
 
-> ⚠️ **Lỗi cú pháp phổ biến:** Thiếu dấu chấm phẩy `;` đằng sau từ khóa đóng ngoặc của `while([Điều kiện lặp]);` làm chương trình báo lỗi biên dịch.
-> 
-> 
+Môi trường: Java Development Kit (JDK) 11+
 
----
-
-## 🛠️ Công cụ sử dụng
-
-* **IDE tham khảo:** IntelliJ IDEA / Eclipse / VS Code
-* **Môi trường:** Java Development Kit (JDK) 11+
-* **Định dạng:** Markdown (`.md`)
+Định dạng: Markdown (.md)
 
 ```
 
