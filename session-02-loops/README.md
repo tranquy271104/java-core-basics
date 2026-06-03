@@ -189,7 +189,3 @@ do {
 * **IDE tham khảo:** IntelliJ IDEA / Eclipse / VS Code
 * **Môi trường:** Java Development Kit (JDK) 11+
 * **Định dạng:** Markdown (.md)
-
-```
-
-```
