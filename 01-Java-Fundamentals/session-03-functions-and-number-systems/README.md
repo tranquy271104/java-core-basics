@@ -63,7 +63,7 @@ public class Main {
 ### 2. Tham số và Giá trị trả về
 
 * **Tham số (Parameter):** Là những giá trị được truyền từ bên ngoài vào cho hàm khi hàm được gọi để tính toán.
-* **Kiểu trả về (Return Type):** * `void`: Hàm thực hiện xong nhiệm vụ và không cần trả về giá trị nào.
+* **Kiểu trả về (Return Type):**  `void`: Hàm thực hiện xong nhiệm vụ và không cần trả về giá trị nào.
 * `int`, `long`, `float`, `double`: Hàm cần trả về một giá trị tính toán bằng từ khóa `return`.
 * `boolean`: Hàm trả về kết quả logic đúng (`true`) hoặc sai (`false`).
 
