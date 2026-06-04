@@ -226,6 +226,3 @@ public static boolean timKiem(int[] a, int n, int x) {
 * **Môi trường:** Java Development Kit (JDK) 11+
 * **Định dạng:** Markdown (`.md`)
 
-```
-
-```
