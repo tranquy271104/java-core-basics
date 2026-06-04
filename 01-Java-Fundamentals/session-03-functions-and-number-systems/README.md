@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Functions%20%26%20Number%20Systems&fontSize=50&fontColor=ffffff" alt="Header Banner">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Functions%20And%20Number%20Systems&fontSize=50&fontColor=ffffff" alt="Header Banner">
 
   <h1>⚙️ Tổng Hợp Kiến Thức Hàm & Hệ Đếm</h1>
   <p><i>Tài liệu tóm tắt về cách xây dựng Hàm (Functions) và kiến thức cốt lõi về Các hệ đếm trong máy tính.</i></p>
