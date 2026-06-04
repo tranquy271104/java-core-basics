@@ -1,16 +1,16 @@
 <div align="center">
-  <img src="[https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%201D%20Arrays%20Notes&fontSize=60&fontColor=ffffff](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%201D%20Arrays%20Notes&fontSize=60&fontColor=ffffff)" alt="Header Banner">
+  <div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%201D%20Arrays%20Notes&fontSize=60&fontColor=ffffff" alt="Header Banner">
 
   <h1>📦 Tổng Hợp Kiến Thức Mảng 1 Chiều</h1>
   <p><i>Tài liệu tóm tắt súc tích, dễ hiểu về Cấu trúc dữ liệu Mảng 1 Chiều (1D Array) trong Java.</i></p>
   
   <p>
-    <img src="[https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)" alt="Java Badge" />
-    <img src="[https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)" alt="Markdown Badge" />
-    <img src="[https://img.shields.io/badge/Status-Completed-success?style=for-the-badge](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)" alt="Status Badge" />
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
+    <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge" />
   </p>
 </div>
-
 ---
 
 ## 📖 Giới thiệu
