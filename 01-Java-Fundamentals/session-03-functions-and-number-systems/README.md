@@ -183,7 +183,3 @@ Việc nắm vững các hệ đếm là kỹ năng bắt buộc để thao tác
 * **IDE tham khảo:** IntelliJ IDEA / Eclipse / VS Code
 * **Môi trường:** Java Development Kit (JDK) 11+
 * **Định dạng:** Markdown (`.md`)
-
-```
-
-```
