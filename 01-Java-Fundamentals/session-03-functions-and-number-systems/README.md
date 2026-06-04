@@ -4,11 +4,6 @@
   <h1>⚙️ Tổng Hợp Kiến Thức Hàm & Hệ Đếm</h1>
   <p><i>Tài liệu tóm tắt về cách xây dựng Hàm (Functions) và kiến thức cốt lõi về Các hệ đếm trong máy tính.</i></p>
   
-  <p>
-    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Badge" />
-    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown Badge" />
-    <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge" />
-  </p>
 </div>
 
 ---
