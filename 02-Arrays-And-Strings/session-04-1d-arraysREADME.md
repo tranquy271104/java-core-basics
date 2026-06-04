@@ -136,7 +136,7 @@ public class Main {
 ✅ **Ưu điểm:**
 
 * Đơn giản, dễ hiểu, logic lưu trữ mạch lạc.
-* Tốc độ truy cập phần tử cực kỳ nhanh chóng (độ phức tạp $O(1)$) nhờ việc gọi trực tiếp thông qua chỉ số Index.
+* Tốc độ truy cập phần tử cực kỳ nhanh chóng (độ phức tạp O(1)) nhờ việc gọi trực tiếp thông qua chỉ số Index.
 * Dễ dàng khai báo hàng loạt phần tử cùng kiểu dữ liệu.
 * Dễ dàng thao tác duyệt qua mọi phần tử chỉ với một vòng lặp duy nhất.
 
