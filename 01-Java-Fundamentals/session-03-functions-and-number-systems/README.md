@@ -140,7 +140,7 @@ Việc nắm vững các hệ đếm là kỹ năng bắt buộc để thao tác
 
 * Là ngôn ngữ gốc của máy tính. Chỉ sử dụng 2 giá trị là `0` và `1`. Với $K$ bit, ta có thể biểu diễn được $2^K$ giá trị khác nhau.
 * **Cách chuyển từ Hệ 10 sang Hệ 2:** Lấy số đó chia liên tục cho 2, ghi lại số dư. Khi thương bằng 0, viết ngược các số dư từ dưới lên.
-* *Ví dụ N = 37:* * 37 / 2 = 18 dư **1**
+* *Ví dụ N = 37:*  37 / 2 = 18 dư **1**
 * 18 / 2 = 9 dư **0**
 * 9 / 2 = 4 dư **1**
 * 4 / 2 = 2 dư **0**
