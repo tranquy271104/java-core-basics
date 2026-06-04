@@ -1,10 +1,3 @@
-Để giúp bạn hoàn thiện trọn vẹn phần **Nền tảng ngôn ngữ (Java Fundamentals)** trên GitHub, mình đã biên soạn mã nguồn Markdown tổng hợp kiến thức từ hai tài liệu **Hàm (Functions)** và **Các hệ đếm phổ biến (Number Systems)**.
-
-Bản Note này bao gồm đầy đủ cú pháp khởi tạo hàm, cách truyền tham số, kỹ thuật nạp chồng hàm (Overloading), cùng với các thuật toán chuyển đổi cơ số (Nhị phân, Thập lục phân) cực kỳ quan trọng trong máy tính.
-
-Bạn chỉ cần tạo thư mục tiếp theo (ví dụ: `session-03-functions-and-number-systems`), tạo file `README.md`, sau đó bấm **Copy** toàn bộ khối mã dưới đây và dán vào là có ngay một trang tài liệu cực kỳ xịn xò:
-
-```markdown
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Java%20Functions%20%26%20Number%20Systems&fontSize=50&fontColor=ffffff" alt="Header Banner">
 
