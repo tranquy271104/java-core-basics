@@ -26,7 +26,7 @@ Nguồn tham khảo chính: **28TECH**.
 
 ### 1. Khái niệm và Cú pháp Hàm
 * **Định nghĩa:** Phần lớn các chương trình được xây dựng để giải quyết bài toán lớn. Hàm (Function) được sử dụng để chia nhỏ chương trình thành các thủ tục nhỏ, giải quyết từng chức năng cụ thể.
-* **Lợi ích:** Code trở nên mạch lạc, dễ đọc; tái sử dụng lại code; dễ dàng debug (sửa lỗi) và bảo trì.
+* **Lợi ích:** Code trở nên mạch lạc, dễ đọc, tái sử dụng lại code, dễ dàng debug (sửa lỗi) và bảo trì.
 
 **Cú pháp khai báo Hàm:**
 ```java
