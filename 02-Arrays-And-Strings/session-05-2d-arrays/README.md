@@ -14,7 +14,7 @@
 ---
 
 ## 📖 Giới thiệu
-Kho lưu trữ này chứa các ghi chép chi tiết về Cấu trúc dữ liệu **Mảng 2 chiều (2D Arrays)**. [cite_start]Mảng 2 chiều được sử dụng phổ biến trong các bài toán liên quan tới ma trận, bảng số, hoặc lưu trữ tọa độ hệ Oxy[cite: 820, 1131]. [cite_start]Có thể coi mảng 2 chiều chính là các mảng 1 chiều được xếp chồng lên nhau[cite: 820].
+Kho lưu trữ này chứa các ghi chép chi tiết về Cấu trúc dữ liệu **Mảng 2 chiều (2D Arrays)**. Trong lập trình, mảng 2 chiều thường được ứng dụng để giải quyết các bài toán về ma trận, bảng số, lưới tọa độ (grid), hoặc đồ thị. Về bản chất, mảng 2 chiều chính là một "mảng của các mảng 1 chiều" xếp chồng lên nhau.
 
 Nguồn tham khảo chính: **28TECH**.
 
@@ -31,55 +31,58 @@ Nguồn tham khảo chính: **28TECH**.
 
 ### 1. Khai báo và Truy cập phần tử
 
-**a. Khai báo mảng 2 chiều:**
-[cite_start]Khi khai báo, các bạn cần chỉ định rõ số hàng (row) và số cột (column) của ma trận[cite: 826].
+**a. Cú pháp khai báo:**
+Khi khởi tạo mảng 2 chiều, ta cần xác định rõ kích thước của 2 chiều: Số hàng (Row) và Số cột (Column).
 
 ```java
-// Khai báo mảng 2 chiều trống có 3 hàng và 3 cột
-[cite_start]int[][] b = new int[3][3]; [cite: 838]
+// Khởi tạo một mảng 2 chiều gồm 3 hàng và 3 cột (các ô nhớ mang giá trị mặc định là 0)
+int[][] b = new int[3][3];
 
-// Khai báo và khởi tạo trực tiếp giá trị
+// Khai báo và gán giá trị trực tiếp cho từng ô
 int[][] a = {
-    {1, 2, 3}, // Hàng 0
-    {4, 5, 6}, // Hàng 1
-    {7, 8, 9}  // Hàng 2
-[cite_start]}; [cite: 831, 832, 835, 836]
+    {1, 2, 3}, // Hàng chỉ số 0
+    {4, 5, 6}, // Hàng chỉ số 1
+    {7, 8, 9}  // Hàng chỉ số 2
+};
 
 ```
 
-**b. Truy cập phần tử:**
-Để truy cập phần tử, dùng cú pháp `tên_mảng[chỉ_số_hàng][chỉ_số_cột]`. Cả hàng và cột đều được đánh số từ `0`.
+**b. Cách truy cập:**
+Mỗi phần tử được định vị bởi tọa độ `[chỉ_số_hàng][chỉ_số_cột]`. (Lưu ý: Chỉ số luôn bắt đầu từ `0`).
 
-* 
-*Ví dụ:* `a[0][2]` sẽ lấy phần tử ở hàng 0, cột 2 (Giá trị là 3).
-
-
+* Ví dụ: Từ mảng `a` ở trên, lệnh `a[0][2]` sẽ trả về phần tử nằm ở hàng đầu tiên, cột thứ ba $\rightarrow$ Giá trị là `3`.
 
 ---
 
 ### 2. Nhập và Duyệt mảng 2 chiều
 
-Để duyệt qua mảng 2 chiều, ta cần sử dụng **2 vòng lặp For lồng nhau**: vòng lặp ngoài chạy theo từng hàng, vòng lặp trong chạy theo từng cột của hàng đó.
+Để quét qua toàn bộ các ô trong ma trận, phương pháp chuẩn nhất là dùng **2 vòng lặp `for` lồng nhau**. Vòng ngoài điều khiển biến hàng, vòng trong điều khiển biến cột.
 
 ```java
-Scanner sc = new Scanner(System.in);
-int n = sc.nextInt(); [cite_start]// Số hàng [cite: 857]
-int m = sc.nextInt(); [cite_start]// Số cột [cite: 858]
-[cite_start]int[][] a = new int[n][m]; [cite: 864]
+import java.util.Scanner;
 
-// 1. Nhập mảng 2 chiều
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-        [cite_start]a[i][j] = sc.nextInt(); [cite: 864, 865]
-    }
-}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // Nhập số lượng hàng
+        int m = sc.nextInt(); // Nhập số lượng cột
+        int[][] a = new int[n][m];
 
-// 2. In mảng 2 chiều
-for (int i = 0; i < n; i++) {
-    for (int j = 0; j < m; j++) {
-        [cite_start]System.out.print(a[i][j] + " "); [cite: 867, 868]
+        // Bước 1: Nhập dữ liệu cho ma trận
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        // Bước 2: In ma trận ra màn hình theo đúng định dạng lưới
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println(); // Kết thúc một hàng thì bắt buộc phải xuống dòng
+        }
     }
-    System.out.println(); // Xuống dòng sau khi in xong 1 hàng
 }
 
 ```
@@ -88,52 +91,45 @@ for (int i = 0; i < n; i++) {
 
 ### 3. Các bài toán cơ bản trên Ma trận
 
-**a. Tìm phần tử Lớn nhất / Nhỏ nhất:**
+**a. Tìm giá trị Max / Min của toàn bộ ma trận:**
 
 ```java
-[cite_start]int minVal = Integer.MAX_VALUE; [cite: 878]
-[cite_start]int maxVal = Integer.MIN_VALUE; [cite: 878]
+int minVal = Integer.MAX_VALUE;
+int maxVal = Integer.MIN_VALUE;
 
 for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
-        [cite_start]minVal = Math.min(minVal, a[i][j]); [cite: 883, 884, 885]
-        [cite_start]maxVal = Math.max(maxVal, a[i][j]); [cite: 886, 887]
+        minVal = Math.min(minVal, a[i][j]);
+        maxVal = Math.max(maxVal, a[i][j]);
     }
 }
 
 ```
 
-**b. Tính tổng từng hàng của ma trận:**
+**b. Tính tổng các phần tử trên từng hàng:**
 
 ```java
 for (int i = 0; i < n; i++) {
-    int rowSum = 0; [cite_start]// Reset tổng mỗi khi sang hàng mới [cite: 905]
+    int rowSum = 0; // Biến lưu tổng phải được reset về 0 mỗi khi chuyển sang hàng mới
     for (int j = 0; j < m; j++) {
-        [cite_start]rowSum += a[i][j]; [cite: 906, 907]
+        rowSum += a[i][j];
     }
-    System.out.println("Tổng hàng " + i + ": " + rowSum);
+    System.out.println("Tổng của hàng " + i + " là: " + rowSum);
 }
 
 ```
 
-**c. Cộng / Trừ / Nhân Ma trận:**
-
-* **Cộng/Trừ:** Hai ma trận phải **cùng kích thước** (cùng số hàng và cột). Kết quả là `a[i][j] + b[i][j]`.
-
-
-* 
-**Nhân 2 ma trận:** Để ma trận A (cỡ $n \times m$) nhân được với ma trận B (cỡ $p \times q$), thì **số cột của A phải bằng số hàng của B** ($m = p$). Ma trận kết quả C sẽ có cỡ $n \times q$.
-
-
+**c. Phép nhân 2 Ma trận:**
+Điều kiện kiên quyết: Số cột của ma trận A bắt buộc phải bằng số hàng của ma trận B. Nếu A cỡ $n \times m$ và B cỡ $m \times p$, thì ma trận kết quả C sẽ có cỡ $n \times p$.
 
 ```java
-// Cấu trúc nhân ma trận C = A * B
-int[][] c = new int[n][q];
+int[][] c = new int[n][p];
+
 for(int i = 0; i < n; i++) {
-    for(int j = 0; j < q; j++) {
+    for(int j = 0; j < p; j++) {
         c[i][j] = 0;
         for(int k = 0; k < m; k++) {
-            c[i][j] += a[i][k] * b[k][j]; [cite_start]// Tích vô hướng [cite: 984, 986, 987, 988]
+            c[i][j] += a[i][k] * b[k][j]; 
         }
     }
 }
@@ -144,44 +140,36 @@ for(int i = 0; i < n; i++) {
 
 ### 4. Kỹ thuật duyệt các ô liền kề (dx, dy)
 
-Đây là kỹ thuật cực kỳ quan trọng để giải các bài toán trên lưới (Grid), tìm đường đi BFS/DFS. Thay vì viết nhiều lệnh `if`, ta dùng 2 mảng `dx` và `dy` để sinh ra tọa độ của các ô xung quanh.
+Đây là "vũ khí tối thượng" để xử lý các bài toán duyệt đồ thị (BFS, DFS) trên lưới 2D. Thay vì dùng một đống lệnh `if-else` lồng nhau, ta định nghĩa 2 mảng cấu trúc bước đi `dx` và `dy`.
 
-* 
-**Duyệt 4 ô chung cạnh (Lên, Xuống, Trái, Phải):** 
-
-
+**Trường hợp 1: Duyệt 4 ô chung cạnh (Trên, Dưới, Trái, Phải)**
 
 ```java
-[cite_start]int[] dx = {-1, 0, 0, 1}; [cite: 1009]
-[cite_start]int[] dy = {0, -1, 1, 0}; [cite: 1010]
+int[] dx = {-1, 0, 0, 1};
+int[] dy = {0, -1, 1, 0};
 
+// Từ ô hiện tại (i, j), ta tạo vòng lặp sinh ra 4 tọa độ lân cận
 for (int k = 0; k < 4; k++) {
-    int i_new = i + dx[k]; [cite_start]// Tọa độ hàng mới [cite: 1028, 1029]
-    int j_new = j + dy[k]; [cite_start]// Tọa độ cột mới [cite: 1028, 1029]
-    // ... Kiểm tra (i_new, j_new) có hợp lệ không rồi xử lý
+    int i_new = i + dx[k]; 
+    int j_new = j + dy[k]; 
+    // Sau đó kiểm tra xem (i_new, j_new) có nằm trong biên của ma trận không rồi xử lý...
 }
 
 ```
 
-* 
-**Duyệt 8 ô chung đỉnh (Gồm cả 4 ô chéo):** 
-
-
+**Trường hợp 2: Duyệt 8 ô chung đỉnh (Bao gồm cả 4 góc chéo)**
 
 ```java
-[cite_start]int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1}; [cite: 1042]
-[cite_start]int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1}; [cite: 1042]
+int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
 ```
 
-* 
-**Duyệt 8 nước đi của Quân Mã (Knight) trên bàn cờ:** 
-
-
+**Trường hợp 3: Nước đi của Quân Mã (Knight) trong cờ vua (Hình chữ L)**
 
 ```java
-[cite_start]int[] dx = {-2, -2, -1, -1, 1, 1, 2, 2}; [cite: 1070]
-[cite_start]int[] dy = {-1, 1, -2, 2, -2, 2, -1, 1}; [cite: 1072]
+int[] dx = {-2, -2, -1, -1, 1, 1, 2, 2};
+int[] dy = {-1, 1, -2, 2, -2, 2, -1, 1};
 
 ```
 
@@ -189,26 +177,33 @@ for (int k = 0; k < 4; k++) {
 
 ### 5. Sắp xếp mảng 2 chiều theo hàng
 
-Khi muốn lưu các cặp số (ví dụ: tọa độ điểm $Oxy$), mảng 2 chiều là một lựa chọn hoàn hảo. Ta có thể sử dụng `Comparator` để sắp xếp các tọa độ này theo một điều kiện cụ thể.
+Mảng 2 chiều rất phù hợp để lưu trữ một tập hợp các điểm tọa độ $(x, y)$. Khi cần sắp xếp các tọa độ này theo một quy luật phức tạp, ta sẽ kết hợp `Arrays.sort()` với một `Comparator` tùy chỉnh.
 
-*Ví dụ:* Cho danh sách tọa độ, sắp xếp tăng dần theo hoành độ $X$. Nếu hoành độ bằng nhau thì sắp xếp tăng dần theo tung độ $Y$.
+*Ví dụ: Sắp xếp các điểm tăng dần theo hoành độ X. Nếu hoành độ X trùng nhau, tiếp tục sắp xếp tăng dần theo tung độ Y.*
 
 ```java
-// Khai báo mảng Object Integer để dùng Comparator
-[cite_start]Integer[][] a = new Integer[n][2]; [cite: 1139]
+import java.util.Arrays;
+import java.util.Comparator;
 
-// ... Nhập dữ liệu cho a[i][0] và a[i][1] ...
+public class Main {
+    public static void main(String[] args) {
+        // Lưu ý: Cần dùng mảng đối tượng Integer[][] thay vì int[][] để có thể truyền vào Comparator
+        Integer[][] points = new Integer[n][2];
+        
+        // ... Code nhập dữ liệu ...
 
-[cite_start]Arrays.sort(a, new Comparator<Integer[]>() { [cite: 1145]
-    @Override
-    [cite_start]public int compare(Integer[] o1, Integer[] o2) { [cite: 1146]
-        [cite_start]if (o1[0] != o2[0]) { [cite: 1149]
-            return o1[0] - o2[0]; [cite_start]// So sánh X [cite: 1150, 1151]
-        } else {
-            return o1[1] - o2[1]; [cite_start]// So sánh Y [cite: 1154, 1156]
-        }
+        Arrays.sort(points, new Comparator<Integer[]>() {
+            @Override
+            public int compare(Integer[] p1, Integer[] p2) {
+                if (!p1[0].equals(p2[0])) {
+                    return p1[0] - p2[0]; // So sánh ưu tiên theo X
+                } else {
+                    return p1[1] - p2[1]; // So sánh phụ theo Y
+                }
+            }
+        });
     }
-});
+}
 
 ```
 
